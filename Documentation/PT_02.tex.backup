@@ -1,0 +1,156 @@
+\documentclass[oneside,numbers,spanish]{ezthesis}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{url}
+\usepackage{upquote}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{graphicx} % Inserccion de imagenes.
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage[refpages]{gloss} % glosario
+
+
+%colores
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray45}{gray}{.45}
+\definecolor{gray75}{gray}{.75}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+
+%Configuración para el lenguaje c
+\lstset{language= C,
+showspaces=false,
+showtabs=false,
+breaklines=true,
+showstringspaces=false,
+breakatwhitespace=true,
+escapeinside={(*@}{@*)},
+commentstyle=\color{greencomments},
+keywordstyle=\color{bluekeywords}\bfseries,
+stringstyle=\color{redstrings},
+basicstyle=\ttfamily,
+backgroundcolor=\color{gray97},
+%%%
+numberstyle=\footnotesize,
+numbers=left,
+stepnumber=1,
+numbersep=10pt,
+tabsize=2,
+breaklines=true,
+prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+breakatwhitespace=false,
+aboveskip={1.5\baselineskip},
+columns=fixed,
+upquote=true,
+extendedchars=true,
+%frame=bottomline,
+frame=lines,
+%frame=Ltbr,
+}
+
+%Configuración para el lenguaje sh
+\lstset{language= sh,
+showspaces=false,
+showtabs=false,
+breaklines=true,
+showstringspaces=false,
+breakatwhitespace=true,
+escapeinside={(*@}{@*)},
+commentstyle=\color{greencomments},
+keywordstyle=\color{bluekeywords}\bfseries,
+stringstyle=\color{redstrings},
+basicstyle=\ttfamily,
+backgroundcolor=\color{gray97},
+%%%
+numberstyle=\footnotesize,
+numbers=left,
+stepnumber=1,
+numbersep=10pt,
+tabsize=2,
+breaklines=true,
+prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+breakatwhitespace=false,
+aboveskip={1.5\baselineskip},
+columns=fixed,
+upquote=true,
+extendedchars=true,
+%frame=bottomline,
+frame=lines,
+%frame=Ltbr,
+}
+
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+ 
+
+
+\author{Zetina Moya José Enrique - 206200773}
+\title{Sistema de antivirus y antispam implementado en un FPGA}
+\degree{Licenciatura en Ingeniería en Computación}
+\supervisor{M. en C. Oscar Alvarado Nava}
+\institution{Universidad Autónoma Metropolitana Unidad Azcapotzalco}
+\faculty{División de Ciencias Básicas e Ingeniería}
+
+\hyperlinking
+\begin{document}
+
+
+%% # Portada de la tesis #
+%% Mirar el archivo "titlepage.tex" para los detalles.
+\include{titlepage}
+
+%% # Prefacios #
+
+\include{resumen}
+\include{abstract}
+\include{gracias}
+
+%% # 'Indices y listas de contenido #
+
+\tableofcontents
+\listoffigures
+
+
+%% # Cap'itulos #
+
+\include{intro}
+\include{fpga}
+% \include{MicroBlaze}
+\include{diseno}
+\include{soperativo}
+\include{compilacion}
+\include{filesystem}
+\include{minimal}
+\include{antivirus}
+\include{implementacion}
+% \include{antispam}
+% \include{openssh}
+
+
+
+\appendix
+
+%% Cap'itulos incluidos despues del comando \appendix aparecen como ap'endices
+%% de la tesis.
+\include{apendiceA} 
+\include{apendiceB}
+
+
+%% # Bibliograf'ia#
+
+\bibliography{biblio}
+
+\end{document}

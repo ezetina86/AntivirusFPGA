@@ -1,0 +1,144 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Andersen(2006-2012)}]{buildroot}
+Erik Andersen.
+\newblock \emph{The Buildroot user manual}.
+\newblock 2006-2012.
+
+\bibitem[{Arium(2003)}]{embedded}
+American Arium.
+\newblock \emph{Embedded Linux Debug Tools, A New Paradigm}.
+\newblock RTC magazine, 2003.
+\newblock \urlprefix\url{http://www.rtcmagazine.com/articles/view/100131}.
+
+\bibitem[{Avoine et~al.(2007)Avoine, Oechslin, y Junod}]{avoine}
+G.~Avoine, P.~Oechslin, y P.~Junod.
+\newblock \emph{Computer System Security: Basic Concepts and Solved Exercises}.
+\newblock Computer and communication sciences. Taylor \& Francis, 2007.
+\newblock ISBN 9781420046205.
+
+\bibitem[{Bovet y Cesat{\'\i}(2005)}]{understanding}
+D.P. Bovet y M.~Cesat{\'\i}.
+\newblock \emph{Understanding The Linux Kernel}.
+\newblock O'Reilly Series. O'Reilly, 2005.
+\newblock ISBN 9780596005658.
+
+\bibitem[{Corporation(2012)}]{fpga}
+Altera Corporation.
+\newblock \emph{What is an FPGA?}
+\newblock Altera Corporation, 2012.
+\newblock \urlprefix\url{http://www.altera.com/products/fpga.html}.
+
+\bibitem[{Droms(1997)}]{dhcp}
+R.~Droms.
+\newblock \emph{Dynamic Host Configuration Protocol}.
+\newblock IEEE, 1997.
+\newblock \urlprefix\url{http://www.ietf.org/rfc/rfc2131.txt}.
+
+\bibitem[{Foundation(2013)}]{gcc}
+Free~Software Foundation.
+\newblock \emph{GCC, the GNU Compiler Collection}.
+\newblock Free Software Foundation, 2013.
+\newblock \urlprefix\url{http://gcc.gnu.org/onlinedocs/}.
+
+\bibitem[{Foundation(2009)}]{linux}
+Linux Foundation.
+\newblock \emph{What Is Linux: An Overview of the Linux Operating System}.
+\newblock Linux Foundation, 2009.
+\newblock
+  \urlprefix\url{https://www.linux.com/learn/resource-center/376-linux-is-everywhere-an-overview
+  -of-the-linux-operating-system}.
+
+\bibitem[{Freed(2000)}]{firewall}
+N.~Freed.
+\newblock \emph{Behavior of and Requirements for Internet Firewalls}.
+\newblock IEEE, 2000.
+\newblock \urlprefix\url{http://www.ietf.org/rfc/rfc2979.txt}.
+
+\bibitem[{Greg~Roelofs(2013)}]{zlib}
+Mark~Adler. Greg~Roelofs, Jean-loup~Gailly.
+\newblock \emph{zlib 1.2.8 Manual}.
+\newblock Greg Roelofs, 2013.
+\newblock \urlprefix\url{http://www.zlib.net/manual.html}.
+
+\bibitem[{Lehtinen y Gangemi(2006)}]{lehtinen}
+R.~Lehtinen y G.T. Gangemi.
+\newblock \emph{Computer Security Basics}.
+\newblock Oreilly Series. O'Reilly Media, Incorporated, 2006.
+\newblock ISBN 9780596006693.
+
+\bibitem[{López(2007)}]{emiliano}
+Emiliano~P. López.
+\newblock \emph{Estudio e Implementación de un Router MIPS Mediante Linux
+  Embebido}.
+\newblock Proyecto Fin de Carrera, Universdad Nacional del Litoral, 2007.
+\newblock \urlprefix\url{http://linuxemb.wikidot.com/tesis}.
+
+\bibitem[{Nava()}]{compilacion}
+Oscar~Alvarado Nava.
+\newblock Proceso de compilación.
+\newblock Notas del curso Arquitectura de Computadoras.
+
+\bibitem[{Nava(2007)}]{nava}
+Oscar~Alvarado Nava.
+\newblock \emph{Implementación en FPGAs de Algoritmos de
+  Compresión-Descompresión para Dispositivos Móviles}.
+\newblock Proyecto Fin de Carrera, CINVESTAV, 2007.
+
+\bibitem[{Ni{\~n}o y Camaz{\'o}n(2011)}]{nsistemas}
+J.~Ni{\~n}o y J.N. Camaz{\'o}n.
+\newblock \emph{Sistemas operativos monopuesto}.
+\newblock Ciclos Formativos. Editorial Editex, 2011.
+\newblock ISBN 9788497719711.
+
+\bibitem[{OpenSSH(2012)}]{openssh}
+OpenSSH.
+\newblock \emph{OpenSSH 6 has just been released}.
+\newblock OpenSSH, 2012.
+\newblock \urlprefix\url{http://www.openssh.com/txt/release-6.0}.
+
+\bibitem[{Project(2006)}]{rootfs}
+The Linux~Information Project.
+\newblock \emph{Root Filesystem Definition}.
+\newblock The Linux Information Project, 2006.
+\newblock \urlprefix\url{http://www.linfo.org/root_filesystem.html}.
+
+\bibitem[{Raghavan et~al.()Raghavan, Lad, y Neelakandan}]{raghavan2005embedded}
+P.~Raghavan, A.~Lad, y S.~Neelakandan.
+\newblock \emph{Embedded Linux System Design and Development}.
+\newblock Taylor \& Francis.
+\newblock ISBN 9780849340581.
+
+\bibitem[{Sánchez(2010)}]{Beto}
+Alberto~Rodríguez Sánchez.
+\newblock \emph{Plataforma para la ejecución paralela en un sistema embebido
+  basado en FPGA}.
+\newblock Proyecto Fin de Carrera, UAM Azcapotzalco, 2010.
+
+\bibitem[{Tanenbaum y Garc{\'\i}a(2003)}]{tanenbaum}
+A.S. Tanenbaum y R.E. Garc{\'\i}a.
+\newblock \emph{Sistemas Operativos Modernos}.
+\newblock Pearson Educaci{\'o}n. Pearson Educaci{\'o}n, 2003.
+\newblock ISBN 9789702603153.
+
+\bibitem[{Villafranca(2010)}]{alvarado}
+Usiel~Alvarado Villafranca.
+\newblock \emph{Sistema para la Programación de un FPGA Mediante Interfaz
+  Gráfica de Usuario en Linux}.
+\newblock Proyecto Fin de Carrera, UAM Unidad Azcapotzalco, 2010.
+
+\bibitem[{Yaghmour et~al.(2008)Yaghmour, Masters, Ben-Yossef, y
+  Gerum}]{building}
+K.~Yaghmour, J.~Masters, G.~Ben-Yossef, y P.~Gerum.
+\newblock \emph{Building Embedded Linux Systems}.
+\newblock O'Reilly Series. O'Reilly, 2008.
+\newblock ISBN 9780596529680.
+
+\end{thebibliography}

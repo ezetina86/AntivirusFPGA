@@ -1,0 +1,2 @@
+ -p virtex2p -lang vhdl -lp /home/proyecto/Proyecto/lib/
+ethernet_mac Bought

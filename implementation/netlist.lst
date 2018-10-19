@@ -1,0 +1,21 @@
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/system.ngc 1350676432
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/ppc405_0_wrapper.ngc 1350676273
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/ppc405_1_wrapper.ngc 1350676279
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/jtagppc_0_wrapper.ngc 1350676282
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/reset_block_wrapper.ngc 1350676287
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/plb_wrapper.ngc 1350676295
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/opb_wrapper.ngc 1350676300
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/plb2opb_wrapper.ngc 1350676310
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/rs232_uart_1_wrapper.ngc 1350676315
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/ethernet_mac_wrapper.ngc 1350676403
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/sysace_compactflash_wrapper.ngc 1350676333
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper.ngc 1350676406
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/plb_bram_if_cntlr_1_wrapper.ngc 1350676368
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc 1350676373
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/opb_intc_0_wrapper.ngc 1350676378
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/sysclk_inv_wrapper.ngc 1350676382
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/clk90_inv_wrapper.ngc 1350676386
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/ddr_clk90_inv_wrapper.ngc 1350676390
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/dcm_0_wrapper.ngc 1350676394
+/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/dcm_1_wrapper.ngc 1350676398
+OK

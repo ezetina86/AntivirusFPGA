@@ -1,0 +1,34 @@
+\select@language {spanish}
+\contentsline {chapter}{Resumen}{2}{section*.1}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{6}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Objetivos}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Objetivo general}{8}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Objetivos espec\IeC {\'\i }ficos}{8}{subsection.1.2.2}
+\contentsline {chapter}{\numberline {2}FPGA}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introducci\IeC {\'o}n}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}NetFPGA}{11}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}\emph {PowerPC 405-S Embedded Processor Core}}{12}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Compilaci\IeC {\'o}n y carga del \emph {driver} en Linux}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Instalaci\IeC {\'o}n de dependencias en Debian GNU/Linux}{14}{subsection.2.3.1}
+\contentsline {subsubsection}{Compilaci\IeC {\'o}n del \emph {driver}}{15}{section*.5}
+\contentsline {subsubsection}{Verificando la interfaces de la tarjeta de desarrollo NetFPGA}{15}{section*.6}
+\contentsline {subsection}{\numberline {2.3.2}Instalaci\IeC {\'o}n del \emph {driver} en CentOS }{16}{subsection.2.3.2}
+\contentsline {subsubsection}{Verificando la interfaces de la tarjeta de desarrollo NetFPGA}{17}{section*.7}
+\contentsline {subsubsection}{Reprogramando CPCI}{17}{section*.8}
+\contentsline {chapter}{\numberline {3}Sistema Operativo}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introducci\IeC {\'o}n}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}Linux}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}El \emph {kernel} de Linux}{23}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Sistema de archivos}{24}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}\emph {Embedded Linux}}{25}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Compilaci\IeC {\'o}n del \emph {kernel}}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introducci\IeC {\'o}n}{27}{section.4.1}
+\contentsline {section}{\numberline {4.2}El proceso de compilaci\IeC {\'o}n}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}Compilaci\IeC {\'o}n cruzada}{28}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Sistema huesped}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Sistema objetivo}{29}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}GNU toolchain}{30}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {A}Familiarizaci\IeC {\'o}n con la tarjeta de desarrollo NetFPGA}{31}{appendix.A}
+\contentsline {section}{\numberline {A.1}Prueba de autocomprobaci\IeC {\'o}n}{31}{section.A.1}
+\contentsline {chapter}{Bibliograf\'{\i }a}{33}{section*.9}

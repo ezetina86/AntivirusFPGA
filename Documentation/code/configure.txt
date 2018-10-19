@@ -1,0 +1,461 @@
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... powerpc-unknown-none
+checking target system type... powerpc-unknown-none
+creating target.h - canonical system defines
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for ppc-strip... no
+checking for strip... strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking how to create a ustar tar archive... gnutar
+checking for gawk... (cached) mawk
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for style of include used by make... GNU
+checking for ppc-gcc... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... yes
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc accepts -g... yes
+checking for /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc option to accept ISO C89... none needed
+checking dependency style of /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc... gcc3
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld
+checking if the linker (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-nm
+checking the name lister (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-nm) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld option to reload object files... -r
+checking for ppc-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... unknown
+checking for ppc-ar... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ar
+checking for ppc-strip... strip
+checking for ppc-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-nm output from /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc object... ok
+checking how to run the C preprocessor... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-cpp
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc supports -fno-rtti -fno-exceptions... no
+checking for /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc option to produce PIC... -fPIC -DPIC
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc PIC flag -fPIC -DPIC works... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc static flag -static works... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc supports -c -o file.o... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc supports -c -o file.o... (cached) yes
+checking whether the /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc linker (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... no
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... cross
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... no
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking which extension is used for runtime loadable modules... .so
+checking which variable specifies run-time module search path... 
+checking for the default library search path... /lib /usr/lib
+checking for library containing dlopen... -ldl
+checking for dlerror... yes
+checking for shl_load... (cached) no
+checking for shl_load in -ldld... (cached) no
+checking for dld_link in -ldld... no
+checking for _ prefix in compiled symbols... no
+checking whether deplibs are loaded by dlopen... unknown
+checking for argz.h... no
+checking for error_t... no
+checking for argz_add... no
+checking for argz_append... no
+checking for argz_count... no
+checking for argz_create_sep... no
+checking for argz_insert... no
+checking for argz_next... no
+checking for argz_stringify... no
+checking whether libtool supports -dlopen/-dlpreopen... yes
+checking for ltdl.h... yes
+checking whether lt_dlinterface_register is declared... yes
+checking for lt_dladvise_preload in -lltdl... yes
+checking where to find libltdl headers... 
+checking where to find libltdl library... -lltdl
+checking for unistd.h... (cached) yes
+checking for dl.h... no
+checking for sys/dl.h... no
+checking for dld.h... no
+checking for mach-o/dyld.h... no
+checking for dirent.h... yes
+checking for closedir... yes
+checking for opendir... yes
+checking for readdir... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for multiarch libdir... ${exec_prefix}/lib
+checking for ANSI C header files... (cached) yes
+checking for C/C++ restrict keyword... __restrict
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking whether FPU byte ordering is bigendian... yes
+checking whether byte ordering is bigendian... yes
+checking for cos in -lm... yes
+checking for a supported version of gcc... ok (4.7.3)
+checking for gcc bug PR27603... cross-compiling, assumed ok
+checking for gcc bug PR26763-2... cross-compiling, assumed ok
+checking for valid code generation of CLI_ISCONTAINED... cross-compiling, assumed ok
+checking for gcc bug PR28045... cross-compiling, assumed ok
+checking for gcc bug PR37573... cross-compiling, assumed ok
+checking for ld --version-script... yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking sys/int_types.h usability... no
+checking sys/int_types.h presence... no
+checking for sys/int_types.h... no
+checking for dlfcn.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking sys/inttypes.h usability... no
+checking sys/inttypes.h presence... no
+checking for sys/inttypes.h... no
+checking for memory.h... (cached) yes
+checking ndir.h usability... no
+checking ndir.h presence... no
+checking for ndir.h... no
+checking for stdlib.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking sys/filio.h usability... no
+checking sys/filio.h presence... no
+checking for sys/filio.h... no
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking stdbool.h usability... yes
+checking stdbool.h presence... yes
+checking for stdbool.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking for off_t... yes
+checking size of short... 2
+checking size of int... 4
+checking size of long... 4
+checking size of long long... 8
+checking size of void *... 4
+checking whether uname(2) is POSIX... no
+checking for bind in -lsocket... no
+checking for library containing gethostent... none required
+checking for poll... yes
+checking for setsid... yes
+checking for memcpy... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for strerror_r... yes
+checking for strlcpy... (cached) yes
+checking for strlcat... (cached) yes
+checking for strcasestr... yes
+checking for inet_ntop... yes
+checking for setgroups... yes
+checking for initgroups... yes
+checking for ctime_r... yes
+checking for mkstemp... yes
+checking for mallinfo... yes
+checking for madvise... yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for working mmap... no
+checking for sysconf(_SC_PAGESIZE)... yes
+checking for getpagesize()... yes
+checking for MAP_ANON(YMOUS)... MAP_ANONYMOUS
+configure: ****** mempool support disabled (mmap not available or not usable)
+checking for ld used by GCC... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld
+checking if the linker (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking check.h usability... no
+checking check.h presence... no
+checking for check.h... no
+configure: unable to compile/link with check
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for zlib installation... /usr
+checking for inflateEnd in -lz... yes
+checking for gzopen in -lz... yes
+checking how to link with libbz2... -lbz2
+checking for BZ2_bzReadOpen in -lbz2... yes
+checking bzlib.h usability... yes
+checking bzlib.h presence... yes
+checking for bzlib.h... yes
+checking for CVE-2008-1372... ok
+checking for CVE-2010-0405... ok
+checking for getaddrinfo... no
+checking for IPv6 support... no
+checking for resolv.h... yes
+checking for dn_expand in std libs... yes
+checking whether setpgrp takes no argument... yes
+checking for libiconv_open in -liconv... no
+checking for iconv... no
+checking whether in_port_t is defined... yes
+checking for in_addr_t definition... yes
+checking for sched_yield... yes
+checking for pthread_yield... no
+checking for enable_extended_FILE_stdio... no
+checking for readdir_r... support disabled
+checking for ctime_r... yes, and it takes 2 arguments
+checking for socklen_t... yes
+checking for clamav in /etc/passwd... yes, user clamav and group clamav
+checking for structure packing via __attribute__((packed))... yes
+checking for type aligning via __attribute__((aligned))... yes
+checking that structure packing works... yes
+checking for fd_set... yes, found in sys/select.h
+checking default FD_SETSIZE value... 256
+checking whether signed right shift is sign extended... no
+checking for recvmsg... yes
+checking for sendmsg... yes
+checking for msg_control field in struct msghdr... yes
+checking BSD 4.4 / RFC2292 style fd passing... no
+checking ncurses/ncurses.h usability... no
+checking ncurses/ncurses.h presence... no
+checking for ncurses/ncurses.h... no
+configure: unable to compile/link with ncurses
+checking ncurses.h usability... yes
+checking ncurses.h presence... yes
+checking for ncurses.h... yes
+checking linking with ncurses... ok
+configure: Compiling and linking with ncurses by using  -lncurses
+configure: creating ./config.status
+config.status: creating libltdl/Makefile
+config.status: creating clamscan/Makefile
+config.status: creating database/Makefile
+config.status: creating docs/Makefile
+config.status: creating clamd/Makefile
+config.status: creating clamdscan/Makefile
+config.status: creating clamav-milter/Makefile
+config.status: creating freshclam/Makefile
+config.status: creating sigtool/Makefile
+config.status: creating clamconf/Makefile
+config.status: creating etc/Makefile
+config.status: creating test/Makefile
+config.status: creating unit_tests/Makefile
+config.status: creating clamdtop/Makefile
+config.status: creating clambc/Makefile
+config.status: creating Makefile
+config.status: creating clamav-config
+config.status: creating libclamav.pc
+config.status: creating platform.h
+config.status: creating docs/man/clamav-milter.8
+config.status: creating docs/man/clamav-milter.conf.5
+config.status: creating docs/man/clambc.1
+config.status: creating docs/man/clamconf.1
+config.status: creating docs/man/clamd.8
+config.status: creating docs/man/clamd.conf.5
+config.status: creating docs/man/clamdscan.1
+config.status: creating docs/man/clamscan.1
+config.status: creating docs/man/freshclam.1
+config.status: creating docs/man/freshclam.conf.5
+config.status: creating docs/man/sigtool.1
+config.status: creating docs/man/clamdtop.1
+config.status: creating clamav-config.h
+config.status: clamav-config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in libclamav/c++ (/home/henry/buildroot-2013.05/clamav-0.97.8/libclamav/c++)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  '--host=ppc' 'host_alias=ppc' 'CC=/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc' 'CPP=/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-cpp' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... powerpc-unknown-none
+checking target system type... powerpc-unknown-none
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for ppc-strip... no
+checking for strip... strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking how to create a pax tar archive... gnutar
+checking for C++ compiler default output file name... a.out
+checking whether the C++ compiler works... yes
+checking whether we are cross compiling... yes
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++... gcc3
+checking for ppc-gcc... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc
+checking whether we are using the GNU C compiler... yes
+checking whether /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc accepts -g... yes
+checking for /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc option to accept ISO C89... none needed
+checking dependency style of /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc... gcc3
+checking how to run the C preprocessor... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-cpp
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld
+checking if the linker (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-nm
+checking the name lister (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld option to reload object files... -r
+checking for ppc-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... unknown
+checking for ppc-ar... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ar
+checking for ppc-strip... strip
+checking for ppc-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-nm output from /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc object... ok
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ accepts -g... (cached) yes
+checking dependency style of /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++... (cached) gcc3
+checking how to run the C++ preprocessor... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ -E
+checking for objdir... .libs
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc supports -fno-rtti -fno-exceptions... no
+checking for /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc option to produce PIC... -fPIC -DPIC
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc PIC flag -fPIC -DPIC works... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc static flag -static works... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc supports -c -o file.o... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc supports -c -o file.o... (cached) yes
+checking whether the /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-gcc linker (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... no
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... no
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for ld used by /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++... /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld
+checking if the linker (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld) is GNU ld... yes
+checking whether the /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ linker (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld) supports shared libraries... no
+checking for /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ option to produce PIC... -fPIC -DPIC
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ PIC flag -fPIC -DPIC works... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ static flag -static works... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ supports -c -o file.o... yes
+checking if /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ supports -c -o file.o... (cached) yes
+checking whether the /home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-g++ linker (/home/henry/buildroot-2013.05/output/host/usr/bin/powerpc-linux-ld) supports shared libraries... no
+checking dynamic linker characteristics... no
+checking how to hardcode library paths into programs... immediate
+checking for GNU make... make
+checking for supported C++ compiler version... ok (4.7.3)
+checking for supported OS... configure: creating ./config.status
+config.status: creating libltdl/Makefile
+config.status: creating clamscan/Makefile
+config.status: creating database/Makefile
+config.status: creating docs/Makefile
+config.status: creating clamd/Makefile
+config.status: creating clamdscan/Makefile
+config.status: creating clamav-milter/Makefile
+config.status: creating freshclam/Makefile
+config.status: creating sigtool/Makefile
+config.status: creating clamconf/Makefile
+config.status: creating etc/Makefile
+config.status: creating test/Makefile
+config.status: creating unit_tests/Makefile
+config.status: creating clamdtop/Makefile
+config.status: creating clambc/Makefile
+config.status: creating Makefile
+config.status: creating clamav-config
+config.status: creating libclamav.pc
+config.status: creating platform.h
+config.status: creating docs/man/clamav-milter.8
+config.status: creating docs/man/clamav-milter.conf.5
+config.status: creating docs/man/clambc.1
+config.status: creating docs/man/clamconf.1
+config.status: creating docs/man/clamd.8
+config.status: creating docs/man/clamd.conf.5
+config.status: creating docs/man/clamdscan.1
+config.status: creating docs/man/clamscan.1
+config.status: creating docs/man/freshclam.1
+config.status: creating docs/man/freshclam.conf.5
+config.status: creating docs/man/sigtool.1
+config.status: creating docs/man/clamdtop.1
+config.status: creating libclamav/Makefile
+config.status: creating clamav-config.h
+config.status: clamav-config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: Summary of detected features follows
+              OS          : none
+              pthreads    : yes ()
+configure: Summary of miscellaneous  features
+              check       : no (auto)
+              clamuko     : yes
+              fdpassing   : 0
+              IPv6        : no
+configure: Summary of optional tools
+              clamdtop    : -lncurses (auto)
+              milter      : yes (disabled)
+configure: Summary of engine performance features)
+              release mode: yes
+              jit         : no (auto)
+              mempool     : no
+configure: Summary of engine detection features
+              autoit_ea06 : yes
+              bzip2       : ok
+              zlib        : /usr
+              unrar       : yes

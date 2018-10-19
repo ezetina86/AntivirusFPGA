@@ -1,0 +1,78 @@
+
+\chapter{Implementación de un antivirus en la  tarjeta de desarrollo
+XUPV2}
+% \section{Herramientas de seguridad en  \emph{hardware} y \emph{software}}
+
+
+\section{ClamAV}
+
+ClamAV es una herramienta antivitus de código abierto (GPL) para sistemas UNIX.
+ClamAV provee multiples  utilidades incliyendo  demonios felexibles y
+escalables a  arquitecturas multinucleo, scanner a  travez de  lineas de
+comandos y una  avanzada herramienta para actualizaciones automaticas.
+
+\section{Caracteristicas}
+
+\begin{itemize}
+ \item Licencia  GNU (\emph{General Public License}, Version 2)
+ \item Estandar de llamadas al sistema POSIX (\emph{Portable Operating System
+Interface})
+ \item Rapido escaneo
+ \item Detección de mas de un millón de  virus, gusanos y troyanos incluyendo
+virus de Macro Microdoft Office, \emph{malware} en dispositivos moviles y otras
+amenazas.
+\item Soporte para  escneo de  archivos  comprimidos incliyendo:
+ \begin{itemize}
+  \item Zip
+  \item RAR
+  \item 7Zip
+  \item ARJ
+  \item Tar
+  \item CPIO
+  \item Gzip
+  \item Bzip2
+ \end{itemize}
+ 
+ \item Soporte para  escneo de  archivos portables ejecutables en plataformas de
+32 y 64 bits incliyendo:
+\begin{itemize}
+ \item AsPack
+ \item UPX
+ \item PSG
+ \item Petite
+ \item wwpack32
+\end{itemize}
+
+\item  Soporte para archivos  ELF (32 y 64 bits)
+
+\item Soport todos los  formatos de correo electronico
+
+\item Soporte especial para formatos especiales  incluidos:
+\begin{itemize}
+ \item HTML
+ \item RTF
+ \item PDF
+\end{itemize}
+\item Actualizador de base de datos avanzado  con soporte para 
+actualizaciones a travez de scripts, firmas digitales  y DNS.
+
+\end{itemize}
+
+\section{Plataformas Soportadas}
+
+\subsection{UNIX}
+
+A partir de la  verisión 0.9 ClamAV soporta:
+\begin{itemize}
+ \item GNU/Linux
+ \item Solaris
+ \item FreeBSD
+ \item OpenBSD
+ \item Mac OS X
+\end{itemize}
+
+\subsection{Windows}
+
+Desde la  version 0.9  ClamAV tiene  una version nativa desarrollada bajo
+Visual Stuido.
+

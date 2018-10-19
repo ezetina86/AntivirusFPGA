@@ -1,0 +1,99 @@
+\chapter{Pruebas con la tarjeta de desarrollo
+NetFPGA}\label{ApexB}
+
+
+
+\section{Autocomprobación}
+
+El \emph{Selftest} o prueba de autocomprobación es un \emph{bitfile} que garantiza que todos los
+componentes de la plataforma de desarrollo son totalmente funcionales. El
+autodiagnóstico se compone tanto de un bitfile que contiene la lógica y
+las interfaces de los componentes externos, como de un software que muestra los
+resultados. El \emph{selftest} prueba todo el hardware en paralelo. La
+prueba continúa funcionando en repetidas ocasiones hasta que sea terminado por
+el usuario. 
+
+El bitfile realiza pruebas rigurosas de la \emph{SRAM} y \emph{DRAM DDR2} para
+asegurarse de que todas las líneas de la memoria pueden ser adecuadamente
+escritas y leídas . En la prueba de red se envían ráfagas de paquetes en las
+interfaces Ethernet y los cables de \emph{loopback}  se ponen en marcha para que
+los paquetes pueden ser leídos y en comparación con los datos que se transmiten.
+
+La prueba de \emph{loopback SATA} transmite los datos mediante las lienas de
+entrada y salida  Multi-Gigabit líneas (MGIOs) para asegurar que los datos
+pueden ser transmitidos de forma fiable en la alta velocidad de interfaces de
+entrada y salida .
+
+La prueba de DMA ejerce el controlador \emph{PCI (CPCI), VirtexII}, y el bus
+\emph{PCI} para asegurarse de que grandes bloques de datos pueden ser enviados
+entre la tarjeta de desarrollo NetFPGA y  memoria de la computadora huesped.
+
+
+Las siguientes instrucciones asumen que se ha instalado con éxito una tarjeta
+de desarrollo NetFPGA con Fedora.\cite{verifing}.
+
+\begin{itemize}
+ \item Encender las interfaces  \textbf{nf2cX}
+  \begin{verbatim}
+  root@fedora:~#chmod +x ise.sh
+  \end{verbatim}
+ \item Cargar a la tarjeta de desarrollo el \emph{bitfile self-test}
+ \begin{verbatim}
+   nf_download ~/netfpga/bitfiles/selftest.bit 
+ \end{verbatim}
+ obteniendo la siguiente salida:
+ \begin{verbatim}
+  Bit file built from: nf2_top_par.ncd;HW_TIMEOUT=FALSE
+  Part: 2vp50ff1152
+  Date: 2011/11/17
+  Time: 18:54:24
+  Error Registers: 0
+  Good, after resetting programming interface the FIFO is empty
+  Download completed -  2377668 bytes. (expected -1).
+  DONE went high - chip has been successfully programmed.
+  CPCI Information
+  ----------------
+  Version: 4 (rev 1)
+
+  Device (Virtex) Information
+  ---------------------------
+  Project directory: selftest
+  Project name: Selftest
+  Project description: 
+  NetFPGA selftest -- exercises all major subsystems of the board
+
+  Device ID: 5
+  Version: 1.1.0
+  Built against CPCI version: 4 (rev 1)
+ \end{verbatim}
+
+ \item Ejecutar el \emph{self-test}
+ \begin{verbatim}
+    ~/netfpga/projects/selftest/sw/selftest 
+ \end{verbatim}
+ la salida que se obtuvo al ejecutar el   \emph{self-test} es la siguiente:
+
+  \begin{verbatim}
+  CPCI Information
+  ----------------
+  Version: 4 (rev 1)
+
+  Device (Virtex) Information
+  ---------------------------
+  Project directory: selftest
+  Project name: Selftest
+  Project description: 
+  NetFPGA selftest -- exercises all major subsystems of the board
+
+  Device ID: 5
+  Version: 1.1.0
+  Built against CPCI version: 4 (rev 1)
+
+  NetFPGA selftest 1.00 alpha
+  Running..... PASSED
+
+  \end{verbatim}
+\end{itemize}
+
+
+

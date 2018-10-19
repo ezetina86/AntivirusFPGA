@@ -1,0 +1,260 @@
+
+\section{NetFPGA}
+
+El Proyecto NetFPGA se refiere a un esfuerzo para desarrollar un hardware de
+código abierto y la plataforma de software que permite la rápida creación de
+prototipos de dispositivos de red. 
+
+NetFPGA se distingue principalmente en dos formas. En primer lugar se encuentra
+en su enfoque basado en FPGA para dispositivos de red de creación de prototipos.
+Esto permite a los usuarios desarrollar diseños que son capaces de procesar los
+paquetes a velocidad de línea, una capacidad general no lograda por los
+enfoques basados en \emph{software}. La segunda característica distintiva en el 
+NetFPGA es su enfoque en el apoyo a una comunidad de \emph{hardware} de código
+abierto y desarrolladores de \emph{software} que puedan compartir y construir
+sobre cada uno de los proyectos y los bloques de construcción\cite{netfpga1}.
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[scale=.50]{./figuras/netfpga.jpg}
+ % capas.png: 607x522 pixel, 72dpi, 21.41x18.41 cm, bb=0 0 607 522
+ \caption{Tarjeta de desarrollo NetFPGA}
+ \label{Tarjeta de desarrollo NetFPGA}
+\end{figure}
+
+
+El NetFPGA incluye el todos los recursos de la lógica, la memoria, y
+interfaces Gigabit Ethernet necesarios para construir un \emph{swtich} completo,
+el router y  o  un dispositivo de seguridad. Debido a que la ruta de datos
+completa se implementa en el hardware, el sistema puede soportar paquetes 
+\emph{back-to-back} a velocidad completa de gigabit y tiene una
+latencia de procesamiento se mide en sólo unos pocos ciclos de reloj.
+
+
+
+Las características con las que cuenta el NetFPGA son:
+
+  \begin{itemize}
+   \item Xilinx Virtex-II Pro 50
+   \item 4 puertos de red Gigabit Ethernet
+   \item 4.5 MBytes SRAM
+   \item 64 MBytes DDR2 DRAM
+   \item 2 conectores de entrada y salida SATA
+   \item Slot PCI Estándar
+   \item Conector para cable JTAG Xilinx ChipScope 
+  \end{itemize}
+
+\subsection{\emph{PowerPC 405-S Embedded Processor Core}}
+
+El procesador PowerPC 405-S de 32-bits es una implementación de la arquitectura
+PowerPC. Es miembro de la familia \emph{PowerPC 400 series}, contiene 
+componentes esenciales de un subsistema empotrado de alto rendimiento. Entre
+otras funciones incluye memoria gestión, memoria caché y control de
+temporizadores y depuración de instalaciones.
+
+La arquitectura del procesador PowerPC 405-S implementa los registros a nivel de
+usuario, un modelo de programación, tipos de datos, modos de direccionamiento, y
+ 32 bits de operaciones de punto fijo. Las operaciones de punto flotante y 
+las excepciones que estas causan pueden ser emuladas por software, la
+organización del procesador se puede observar en la figura \ref{Organización del
+procesador}.
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[scale=.60]{./figuras/arc_ppc405.png}
+ % capas.png: 607x522 pixel, 72dpi, 21.41x18.41 cm, bb=0 0 607 522
+ \caption{Organización del procesador \emph{PowerPC 405-S}}
+ \label{Organización del procesador}
+\end{figure}
+
+
+\section{Compilación y carga del \emph{driver} en Linux}
+
+Un controlador de dispositivo, llamado normalmente \emph{driver} es un programa
+informático que permite al sistema operativo interactuar con un periférico,
+haciendo una abstracción del hardware. Se puede esquematizar como un manual
+de instrucciones que le indica al sistema operativo, cómo debe controlar y
+comunicarse con un dispositivo en particular. Por tanto, es una pieza esencial,
+sin la cual no se podría usar el hardware.
+
+Debido a que el software de controladores de dispositivos se ejecuta como parte
+del sistema operativo, con acceso sin restricciones a todo el equipo, resulta
+esencial que sólo se permitan los controladores de dispositivos autorizados.
+
+Los \emph{drivers} de la tarjeta de desarrollo NetFPGA se pueden obtener en la
+siguiente dirección web:
+
+\url{http://netfpga.org/foswiki/bin/view/NetFPGA/OneGig/Releases}
+
+\subsection{Instalación de dependencias en Debian GNU/Linux}
+
+Dependencia significa que un software necesita de otro para que funcione
+adecuadamente. En Linux es común que se necesiten herramientas o librerías para
+realizar un trabajo. Este problema se puede resolver, en parte, con programas
+que se encargan del software instalado y que tratan de resolver las dependencias
+con información proveída por personas encargadas de los paquetes.
+
+En el caso de la tarjeta de desarrollo NetFPGA es necesaria la instalación de
+dependencias en el sistema huesped con el fin de poder hacer la compilación del
+código fuente del \emph{driver} de forma correcta.
+
+A continuación se listan las dependencias requeridas en Debian GNU/Linux 6.0.4:
+
+\begin{itemize}
+ \item \textbf{libncurses5-dev}, este paquete contiene los archivos de
+cabecera, bibliotecas estáticas y los enlaces simbólicos que los desarrolladores
+que usan ncurses va a necesitar.\\
+
+  \begin{listing}[style=C, numbers=none]	
+  root@debian:~#apt-get install libncurses5-dev
+  \end{listing}
+
+ \item \textbf{libnet1-dev}, proporciona un marco portátil de paquete de red de
+bajo nivel escritura y manipulación. libnet incluye las interfaces portátiles de
+creación de paquetes en la capa IP y la capa de enlace, así como una gran
+cantidad de funcionalidad adicional.
+
+  \begin{listing}[style=C, numbers=none]	
+  root@debian:~#apt-get install libnet1-dev
+  \end{listing}
+
+ \item \textbf{libpcap-dev}, proporciona un marco portátil de bajo nivel
+red de monitoreo. Las aplicaciones incluyen estadísticas de la red
+recolección, supervisión de la seguridad, la depuración de la red, etc.
+
+  \begin{listing}[style=C, numbers=none]	
+  root@debian:~#apt-get install libpcap-dev
+  \end{listing}
+
+
+\end{itemize}
+
+
+\subsubsection{Compilación del \emph{driver}}
+
+Se compila el \emph{driver}:
+
+  \begin{listing}[style=C, numbers=none]
+  root@debian:~#cd ~/netfpga/  make
+  \end{listing}
+
+Se instala el \emph{driver}:
+
+  \begin{listing}[style=C, numbers=none]
+  root@debian:~#cd ~/netfpga/  make install >> salida_install.txt
+  \end{listing}
+
+Se reinicia el sistema:
+
+  \begin{listing}[style=C, numbers=none]
+  root@debian:~#reboot
+  \end{listing}
+
+Una vez que el sistema a reiniciado se verifica la carga del \emph{driver}:
+
+  \begin{listing}[style=C, numbers=none]
+  root@debian:~#lsmod  | grep nf2 
+  nf2                    11925  0 
+  \end{listing}
+
+\subsubsection{Verificando la interfaces de la tarjeta de desarrollo NetFPGA}
+
+Para comprobar que lascuatro interfaces \textbf{nf2cX} se han cargado
+correctamente se utiliza el comando :
+
+  \begin{listing}[style=C, numbers=none]
+  root@debian:~# ifconfig -a | grep nf2 
+  nf2c0     Link encap:Ethernet  HWaddr 00:4e:46:32:43:00  
+  nf2c1     Link encap:Ethernet  HWaddr 00:4e:46:32:43:01  
+  nf2c2     Link encap:Ethernet  HWaddr 00:4e:46:32:43:02  
+  nf2c3     Link encap:Ethernet  HWaddr 00:4e:46:32:43:03  
+  \end{listing}
+
+ \subsection{Instalación del \emph{driver} en CentOS }
+  
+Para hacer sencilla la instalación de los \emph{drivers}, se han creado 
+paquetes \emph{RPM}\footnote{\emph{ RPM Package Manager} (o \emph{RPM},
+originalmente llamado \emph{Red Hat Package Manager}) es una herramienta de
+administración de paquetes pensada básicamente para \emph{GNU/Linux}. Es capaz
+de instalar, actualizar, desinstalar, verificar y solicitar programas.
+\emph{RPM} es el formato de paquete de partida del \emph{Linux Standard Base}.}
+y un repositorio de \emph{YUM}\footnote{\emph{Yellow dog Updater, Modified} es
+una herramienta libre de gestión de paquetes para sistemas \emph{Linux} basados
+en \emph{RPM}.}. Se muestra a continuación los pasos a seguir para la
+instalación de la tarjeta de desarrollo NetFPGA en sistemas CentOS y Fedora.
+
+\begin{enumerate}
+ \item Ingresar al sistema como usuario \emph{root}
+   \begin{listing}[style=C, numbers=none]
+  [proyecto@CentOS ~]\$ su -
+  Password: 
+  [root@CentOS ~]#
+  \end{listing}
+  
+ \item Instalar el repositorio \emph{RPMforge}
+    \begin{listing}[style=C, numbers=none]
+  [root@CentOS ~]#rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt
+  \end{listing}
+  
+   \item Instalar el paquete descargado
+    \begin{listing}[style=C, numbers=none]
+  [root@CentOS ~]#rpm -i rpmforge-release-0.5.2-2.el6.rf.*.rpm
+  \end{listing}
+  
+     \item Instalar el  repositorio \emph{YUM} NetFPGA 
+    \begin{listing}[style=C, numbers=none]
+  [root@CentOS ~]#rpm -Uhv
+http://netfpga.org/yum/el5/RPMS/noarch/netfpga-repo-1-1_CentOS5.noarch.rpm 
+  \end{listing}
+  
+       \item Instalar los paquetes base para la  NetFPGA 
+    \begin{listing}[style=C, numbers=none]
+  [root@CentOS ~]#yum -y install netfpga-base
+  \end{listing}
+  
+  \begin{itemize}
+   \item NOTA: Es necesario instalar algunas dependencias para el correcto
+funcionamiento de la tarjeta de desarrollo, YUM se encargará de instarlas
+automáticamente durante este proceso.
+  \end{itemize}  
+\end{enumerate}
+
+\subsubsection{Verificando la interfaces de la tarjeta de desarrollo NetFPGA}
+
+Para comprobar que lascuatro interfaces \textbf{nf2cX} se han cargado
+correctamente se utiliza el comando :
+
+  \begin{listing}[style=C, numbers=none]
+  root@CentOS:~# ifconfig -a | grep nf2 
+  nf2c0     Link encap:Ethernet  HWaddr 00:4e:46:32:43:00  
+  nf2c1     Link encap:Ethernet  HWaddr 00:4e:46:32:43:01  
+  nf2c2     Link encap:Ethernet  HWaddr 00:4e:46:32:43:02  
+  nf2c3     Link encap:Ethernet  HWaddr 00:4e:46:32:43:03  
+  \end{listing}
+
+  
+ \subsubsection{Reprogramando CPCI}
+ 
+Una vez instalada la tarjeta de desarrollo en el sistema huesped se debe de
+reprogramar el \emph{bus} \emph{CPCI} de la siguiente manera:
+
+  \begin{listing}[style=C, numbers=none]
+  root@CentOS:~# /usr/local/sbin/cpci_reprogram.pl --all  
+  \end{listing}
+  
+ Esperando la salida:
+ 
+   \begin{listing}[style=C, numbers=none]
+   Loading the CPCI Reprogrammer on NetFPGA 0   
+   Loading the CPCI on NetFPGA 0   
+   CPCI on NetFPGA 0 has been successfully reprogrammed 
+  \end{listing}
+ 
+ Es necesario reprogramar el \emph{CPCI} cada vez que se inicie el sistema
+huesped, esto se puede lograr de forma automatica agregando la siguiente liena
+al archivo \emph{/etc/rc.local}:
+
+   \begin{listing}[style=C, numbers=none]
+/usr/local/netfpga/lib/scripts/cpci_reprogram/cpci_reprogram.pl --all 
+  \end{listing}
+

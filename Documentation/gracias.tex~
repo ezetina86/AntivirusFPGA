@@ -1,0 +1,15 @@
+%% Las secciones del "prefacio" inician con el comando \prefacesection{T'itulo}
+%% Este tipo de secciones *no* van numeradas, pero s'i aparecen en el 'indice.
+
+\prefacesection{Agradecimientos}
+
+Este trabajo no habría sido posible sin el apoyo y el estímulo del profesor
+Oscar Alvarado Nava, bajo cuya supervisión seleccioné este tema y comencé el
+proyecto. 
+
+Gracias a mi familia, por su  estímulo constante y amor a lo largo de mis años en la Universidad.
+Estoy agradecido con los ejemplos de mi padre Miguel Angel Zetina, su convicción siempre
+me inspirará, y espero seguir, a mi propio modo, el ejemplo que me ha dado en la vida, a mi 
+madre Lourdes por sus incontables esfuerzos, a mi hermana Maddie quien siempre estuvo
+escuchando y leyendo atentamente mis locuras y a Liliet quien me ha dado apoyo  durante la
+elaboración de este trabajo. Es a ellos a quien dedico este trabajo.

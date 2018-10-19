@@ -1,0 +1,7 @@
+unset  CC CXX CPP CFLAGS INCLUDES CXXFLAGS LD_LIBRARY_PATH LIBRARY_PATH CPATH
+export  CC CXX CPP CFLAGS INCLUDES CXXFLAGS LD_LIBRARY_PATH LIBRARY_PATH CPATH
+unset ARCH
+export ARCH=powerpc
+unset CROSS_COMPILE
+export CROSS_COMPILE=powerpc-405-linux-uclibc-
+export PATH=/home/Proyecto/Crosstool/powerpc-405-linux-uclibc/bin:$PATH

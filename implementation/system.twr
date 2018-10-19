@@ -1,0 +1,221 @@
+--------------------------------------------------------------------------------
+Release 8.2.02i Trace 
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+trce -e 3 -xml system.twx system.ncd system.pcf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc2vp30,-7 (PRODUCTION 1.92 2006-08-18)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+
+================================================================================
+Timing constraint: NET "fpga_0_Ethernet_MAC_PHY_tx_clk_pin_BUFGP" MAXSKEW = 2 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net skew is   1.812ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "fpga_0_Ethernet_MAC_PHY_tx_clk_pin_BUFGP" PERIOD = 40 ns HIGH 14 ns;
+
+ 109 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   4.221ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "fpga_0_Ethernet_MAC_PHY_rx_clk_pin_BUFGP" MAXSKEW = 2 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net skew is   0.182ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "fpga_0_Ethernet_MAC_PHY_rx_clk_pin_BUFGP" PERIOD = 40 ns HIGH 14 ns;
+
+ 114 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   4.280ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "fpga_0_SysACE_CompactFlash_SysACE_CLK_pin_BUFGP/IBUFG" PERIOD = 30 ns
+        HIGH 50%;
+
+ 197 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   4.491ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TSTXOUT_Ethernet_MAC = MAXDELAY FROM TIMEGRP "TXCLK_GRP_Ethernet_MAC" TO
+        TIMEGRP "PADS" 10 ns;
+
+ 5 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.009ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TSRXIN_Ethernet_MAC = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP
+        "RXCLK_GRP_Ethernet_MAC" 6 ns;
+
+ 43 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   5.157ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 10 ns HIGH 50%;
+
+ 0 items analyzed, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_RST1_path" TIG;
+
+ 3 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_fpga_0_DDR_CLK_FB = PERIOD TIMEGRP "fpga_0_DDR_CLK_FB" 10 ns HIGH 50%;
+
+ 0 items analyzed, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm_1_dcm_1_CLK90_BUF = PERIOD TIMEGRP "dcm_1_dcm_1_CLK90_BUF"
+        TS_fpga_0_DDR_CLK_FB PHASE 4.844 ns 
+HIGH 50%;
+
+ 1512 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   4.641ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm_0_dcm_0_CLK0_BUF = PERIOD TIMEGRP "dcm_0_dcm_0_CLK0_BUF" TS_sys_clk_pin
+        HIGH 50%;
+
+ 75483 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   9.686ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm_0_dcm_0_CLK90_BUF = PERIOD TIMEGRP "dcm_0_dcm_0_CLK90_BUF"
+        TS_sys_clk_pin PHASE 2.5 ns HIGH 50%;
+
+ 112 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   8.724ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm_0_dcm_0_CLKFX_BUF = PERIOD TIMEGRP "dcm_0_dcm_0_CLKFX_BUF"
+        TS_sys_clk_pin / 3 HIGH 50%;
+
+ 5 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   3.210ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock fpga_0_Ethernet_MAC_PHY_rx_clk_pin
+--------------------------------------+------------+------------+----------------------------------------+--------+
+                                      |  Setup to  |  Hold to   |                                        | Clock  |
+Source                                | clk (edge) | clk (edge) |Internal Clock(s)                       | Phase  |
+--------------------------------------+------------+------------+----------------------------------------+--------+
+fpga_0_Ethernet_MAC_PHY_dv_pin        |   -3.264(R)|    4.459(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_data_pin<0>|   -3.252(R)|    4.447(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_data_pin<1>|   -3.246(R)|    4.441(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_data_pin<2>|   -3.217(R)|    4.411(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_data_pin<3>|   -3.214(R)|    4.408(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_er_pin     |   -3.223(R)|    4.418(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_BUFGP|   0.000|
+--------------------------------------+------------+------------+----------------------------------------+--------+
+
+Clock fpga_0_Ethernet_MAC_PHY_tx_clk_pin to Pad
+--------------------------------------+------------+----------------------------------------+--------+
+                                      | clk (edge) |                                        | Clock  |
+Destination                           |   to PAD   |Internal Clock(s)                       | Phase  |
+--------------------------------------+------------+----------------------------------------+--------+
+fpga_0_Ethernet_MAC_PHY_tx_data_pin<0>|    7.223(R)|fpga_0_Ethernet_MAC_PHY_tx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_tx_data_pin<1>|    7.222(R)|fpga_0_Ethernet_MAC_PHY_tx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_tx_data_pin<2>|    7.280(R)|fpga_0_Ethernet_MAC_PHY_tx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_tx_data_pin<3>|    7.276(R)|fpga_0_Ethernet_MAC_PHY_tx_clk_pin_BUFGP|   0.000|
+fpga_0_Ethernet_MAC_PHY_tx_en_pin     |    7.277(R)|fpga_0_Ethernet_MAC_PHY_tx_clk_pin_BUFGP|   0.000|
+--------------------------------------+------------+----------------------------------------+--------+
+
+Clock to Setup on destination clock fpga_0_DDR_CLK_FB
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+fpga_0_DDR_CLK_FB|    4.641|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_Ethernet_MAC_PHY_rx_clk_pin
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+fpga_0_Ethernet_MAC_PHY_rx_clk_pin|         |         |    1.498|    2.302|
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_Ethernet_MAC_PHY_tx_clk_pin
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+fpga_0_Ethernet_MAC_PHY_tx_clk_pin|         |    2.744|         |    3.347|
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_SysACE_CompactFlash_SysACE_CLK_pin
+-----------------------------------------+---------+---------+---------+---------+
+                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------+---------+---------+---------+---------+
+fpga_0_SysACE_CompactFlash_SysACE_CLK_pin|    4.491|         |         |         |
+-----------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sys_clk_pin
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_pin    |    9.109|    4.522|    4.843|    2.542|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 77583 paths, 2 nets, and 18816 connections
+
+Design statistics:
+   Minimum period:   9.686ns   (Maximum frequency: 103.242MHz)
+   Maximum path delay from/to any node:   5.157ns
+   Maximum net skew:   1.812ns
+
+
+Analysis completed Fri Oct 19 14:55:20 2012
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 220 MB
+
+
+

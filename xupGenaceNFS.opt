@@ -1,0 +1,8 @@
+-jprog
+-board user
+-target ppc_hw
+-hw implementation/download.bit
+-elf simpleImage.virtex405-micheangeloNFS.elf
+-configdevice devicenr 1 idcode 0x1127e093 irlength 14 partname xc2vp30
+-debugdevice devicenr 1 cpunr 1
+-ace system.ace

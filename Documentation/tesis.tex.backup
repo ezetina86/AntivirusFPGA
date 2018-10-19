@@ -1,0 +1,95 @@
+\documentclass[oneside,numbers,spanish]{ezthesis}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{url}
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\usepackage{listings}
+\lstset{ frame=Ltb,
+     framerule=0pt,
+     aboveskip=0.5cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+     framexleftmargin=0.4cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{gray97},
+     rulesepcolor=\color{black},
+     %
+     stringstyle=\ttfamily,
+     showstringspaces = false,
+     basicstyle=\small\ttfamily,
+     commentstyle=\color{gray45},
+     keywordstyle=\bfseries,
+     %
+     numbers=left,
+     numbersep=15pt,
+     numberstyle=\tiny,
+     numberfirstline = false,
+     breaklines=true,
+   }
+ 
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+ 
+\lstdefinestyle{consola}
+   {basicstyle=\scriptsize\bf\ttfamily,
+    backgroundcolor=\color{gray75},
+   }
+ 
+\lstdefinestyle{C}
+   {language=C,
+   }
+
+
+\author{Zetina Moya José Enrique - 206200773}
+\title{Sistema de antivirus y antispam implementado en un FPGA}
+\degree{Licenciatura en Ingeniería en Computación}
+\supervisor{M. en C. Oscar Alvarado Nava}
+\institution{Universidad Autónoma Metropolitana Unidad Azcapotzalco}
+\faculty{División de Ciencias Básicas e Ingeniería}
+
+\hyperlinking
+\begin{document}
+
+
+%% # Portada de la tesis #
+%% Mirar el archivo "titlepage.tex" para los detalles.
+\include{titlepage}
+
+%% # Prefacios #
+
+\include{resumen}
+
+%\include{gracias}
+
+%% # 'Indices y listas de contenido #
+
+\tableofcontents
+\listoffigures
+
+%% # Cap'itulos #
+
+\include{intro}
+\include{soperativo}
+\include{compilacion}
+\include{fpga}
+
+\appendix
+
+%% Cap'itulos incluidos despues del comando \appendix aparecen como ap'endices
+%% de la tesis.
+\include{apendiceA}
+%\include{apendiceB}
+%\include{apendiceC}
+
+%% # Bibliograf'ia#
+
+\bibliography{biblio}
+
+\end{document}

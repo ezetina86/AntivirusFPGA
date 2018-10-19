@@ -1,0 +1,136 @@
+\chapter{Introducción}
+
+Con el incremento en el uso de internet han aumentado también las amenazas a los
+sistemas de cómputo. Hoy en día, un sistema informático debe ser capaz de
+realizar el filtrado de paquetes maliciosos en el tráfico de red. Sin embargo,
+las herramientas de seguridad y aplicaciones de usuarios comparten un mismo
+CPU\footnote{CPU, acrónimo de \emph{Central Processing Unit} se refiere a la
+unidad central de proceso de una computadora.} con recursos para el
+funcionamiento de herramientas de seguridad basadas
+en \emph{software}.
+
+
+Un sistema de cómputo se vuelve inseguro al encenderlo. Los huecos de
+seguridad en un sistema de cómputo se manifiestan generalmente en
+dos maneras:
+
+\begin{itemize}
+ \item Huecos de seguridad físicos, el problema sucede cuando se da
+acceso  físico a una computadora a personas sin autorización, lo cual
+le permitiría  realizar cosas que normalmente no sería capaz de hacer.
+ \item Huecos de Seguridad en el Software, donde los problemas son
+causados por  puntos escritos incorrectamente en el software, los cuales
+pueden ser  utilizados para hacer cosas indebidas.
+\end{itemize}
+
+En la actualidad para evitar el acceso remoto de personas no
+autorizadas a los sistemas  de c\'omputo es necesario robustecer más
+los sistemas, lo que tiene repercución directa en el tiempo de
+desarrollo de estos, además de hacerlos mas grandes y complejos.
+
+Los sistemas embebidos son dispositivos de propósito específico que se utilizan
+ampliamente en equipamientos de redes de datos, sensado remoto, comunicaciones,
+etc. Estos equipos han sido desarrollados para llevar a cabo un conjunto de
+tareas reducidas y específicas en función de su ámbito de desempeño,
+característica que los diferencia de las computadoras de propósito general. El
+sistema operativo embebido es quien le permite realizar sus funciones y en la
+mayoría de los casos es provisto y desarrolado por el fabricante del hardware.
+
+Implementar un sistema embebido basado en un sistema operativo GNU/Linux que
+funcione de manera eficiente, robusta y sobretodo que permita modificaciones
+según necesidades puntuales es una tarea ardua y compleja.
+
+Para resolver dichos problemas, este trabajo propone construir un sistema de
+seguridad autónomo capaz de manipular y configurar reglas de seguridad en un
+sistema operativo basado en Linux, lo cual será de gran utilidad para la
+administración y seguridad de una red de computadoras, ya que permitiría
+detectar actividades mal intencionadas en el uso de la red.
+
+
+\section{Motivación}
+
+La información es hoy la materia prima de las organizaciones. Tener información
+ayuda a tomar decisiones con seguridad y rapidez. Por tanto, proteger la
+información en todo momento y permitir el acceso a ella sólo para las personas
+que la necesiten y que, además, sea fiable, es un tema fundamental.
+
+Los virus inform\'aticos son hoy una realidad reconocida por las empresas,
+quienes saben que es un problema que mina su productividad, ya que sus
+computadoras est\'an constantemente expuestas a vulnerabilidades de sus sistemas
+de seguridad. El \emph{spam} afecta tambi\'en a las organizaciones, pues
+eliminar todo el \emph{spam} que se recibe toma tiempo y, no s\'olo eso sino que
+al ser excesivo provoca lentitud en los sistemas, lo que tiene una repercusi\'on
+directa en la productividad.
+
+El proyecto realizado describe el diseño de un sistema de seguridad de redes de
+computadoras empotrado\footnote{Sistema Empotrado, traducci\'on del
+ingl\'es \emph{embedded system}, es un sistema dise\~nado utilizando
+componentes \emph{hardware} y \emph{software} en un \'unico m\'odulo y para una
+aplicaci\'on espec\'ifica. Se pretende as\'i conseguir altas prestaciones y gran
+flexibilidad con unos costos relativamente bajos y un consumo de
+energ\'ia moderado.} en un FPGA\footnote{FPGA, acrónimo de \emph{Field
+Programmable Gate Array}, es un dispositivo semiconductor que contiene bloques
+de lógica cuya interconexión y funcionalidad pueden ser configuradas mediante un
+lenguaje de descripción especializado.} con un sistema operativo Linux
+instalado, por lo que es  un sistema basado en \emph{hardware} y
+\emph{software}.
+
+El sistema es capaz de proteger la integridad, confiabilidad
+y disponibilidad de los datos que ingresan o salen de una red de computadoras, 
+ejecutando aplicaciones y servicios de seguridad a través de un sistema
+operativo basado en Linux. La red de computadoras que proteger\'a este
+sistema puede no estar basada Linux, lo que dar\'a al sistema la posibilidad de
+proteger redes de computadoras basadas en otros sistemas operativos.
+
+
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+
+Diseñar e implementar un sistema de seguridad para redes de \'area local
+en la tarjeta de desarrollo NetFPGA\footnote{NetFPGA, es una plataforma de bajo
+costo, diseñada principalmente como una herramienta para la enseñanza de
+hardware de redes \cite{netfpga}.} que permita bloquear el tráfico no autorizado
+a una red y admita al mismo tiempo comunicaciones autorizadas.
+
+\subsection{Objetivos específicos}
+\begin{itemize} 
+
+    \item Implementar un sistema operativo basado en Linux\footnote{Linux,
+    es un núcleo libre usado en sistemas operativos de código
+    abierto\cite{linux}.} en la tarjeta de desarrollo NetFPGA el cual
+    incluya los m\'odulos necesarios para la detecci\'on	
+    de virus, filtrado de paquetes y acceso remoto.
+
+    \item Construir en la tarjeta de desarrollo NetFPGA un sistema capaz de
+    detectar\emph{malware}\footnote{\emph{Malware}, es un tipo de software
+    que tiene como objetivo infiltrarse o dañar una computadora sin el
+    consentimiento de su propietario.} como troyanos\footnote{Troyano, es un
+    software malicioso que se presenta al usuario como un programa aparentemente
+    legítimo e inofensivo pero que al ejecutarlo ocasiona daños.},
+    virus\footnote{Virus informático, es un programa con intenciones malignas,
+    que es capaz de propagarse de una computadora a otra.} y otras amenazas
+    maliciosas, con la finalidad de  proteger los datos que circulan por
+    la red de amenazas o p\'erdidas.
+
+    \item Configurar un \emph { firewall }\footnote{ \emph {Firewall} o
+    cortafuegos, es un dispositivo configurado para permitir, limitar, cifrar y
+     decifrar el tráfico de paquetes en una red de
+    computadoras\cite{firewall}.} en la tarjeta de desarrollo NetFPGA,
+    para filtrar paquetes y evitar intrusiones en la red.
+
+    \item Configurar el servicio DHCP\footnote{DHCP, acrónimo de \emph{Dynamic
+    Host Configuration Protocol}, es un protocolo que permite a dispositivos
+    individuales en una red de direcciones IP obtener su propia información de
+    configuración de red\cite{dhcp}.} en  en la tarjeta de desarrollo NetFPGA,
+    que permita  contar con una  lista de direcciones IP din\'amicas y
+    asignarlas a los equipos conforme \'estas estan disponibles.
+
+    \item Configurar en la terjeta de desarrollo NetFPGA el servicio
+    \emph{OpenSSH}\footnote{OpenSSH, acrónimo de \emph{Open Secure Shell}, es un
+    conjunto de aplicaciones que permiten realizar comunicaciones cifradas a
+    través de una red, usando el protocolo SSH\cite{openssh}.}, para poder
+    acceder a el dispositivo de forma remota.
+
+\end{itemize}

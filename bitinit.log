@@ -1,0 +1,85 @@
+
+bitinit version Xilinx EDK 8.2.02 Build EDK_Im_Sp2.4
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl
+...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr
+_v2_1_0.tcl ...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_brid
+ge_v2_1_0.tcl ...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/opb_ethernetlite_v1_01_b/data/opb_ethern
+etlite_v2_1_0.tcl ...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/opb_sysace_v1_00_c/data/opb_sysace_v2_1_
+0.tcl ...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/plb_ddr_v2_00_a/data/plb_ddr_v2_1_0.tcl
+...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_
+if_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v2_1_0.tc
+l ...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_a/data/dcm_module_v2_1_
+0.tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr
+_v2_1_0.mpd line 36 - tool overriding c_device value X2VP4 to 
+plb2opb_bridge (plb2opb) -
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_brid
+ge_v2_1_0.mpd line 39 - tool overriding c_family value virtex2p to 
+opb_ethernetlite (ethernet_mac) -
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/opb_ethernetlite_v1_01_b/data/opb_ethern
+etlite_v2_1_0.mpd line 49 - tool overriding c_family value virtex2p to 
+plb_ddr (ddr_128mb_16mx64_rank1_row13_col9_cl2_5) -
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/plb_ddr_v2_00_a/data/plb_ddr_v2_1_0.mpd
+line 45 - tool overriding c_family value virtex2p to 
+bram_block (plb_bram_if_cntlr_1_bram) -
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/bram_block_v1_00_a/data/bram_block_v2_1_
+0.mpd line 43 - tool overriding c_family value virtex2 to 
+opb_intc (opb_intc_0) -
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v2_1_0.mp
+d line 38 - tool overriding c_family value virtex2 to 
+dcm_module (dcm_0) -
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_a/data/dcm_module_v2_1_
+0.mpd line 61 - tool overriding c_family value virtex2 to 
+dcm_module (dcm_1) -
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_a/data/dcm_module_v2_1_
+0.mpd line 61 - tool overriding c_family value virtex2 to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl ...
+Sourcing tcl file
+/opt/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_if_cntlr
+_v2_1_0.tcl ...
+Address Map for Processor ppc405_0
+  (0x00000000-0x07ffffff) DDR_128MB_16MX64_rank1_row13_col9_cl2_5	plb
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40e00000-0x40e0ffff) Ethernet_MAC	plb->plb2opb->opb
+  (0x41200000-0x4120ffff) opb_intc_0	plb->plb2opb->opb
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm implementation/system_bd -bt implementation/system.bit  -bd
+bootloops/ppc405_0.elf tag ppc405_0  -o b implementation/download.bit 
+Memory Initialization completed successfully.
+

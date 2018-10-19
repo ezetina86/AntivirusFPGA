@@ -1,0 +1,500 @@
+Release 8.2.02i - xst I.34
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "plb_bram_if_cntlr_1_bram_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : plb_bram_if_cntlr_1_bram_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" in Library plb_bram_if_cntlr_1_bram_elaborate_v1_00_a.
+Entity <plb_bram_if_cntlr_1_bram_elaborate> compiled.
+Entity <plb_bram_if_cntlr_1_bram_elaborate> (Architecture <STRUCTURE>) compiled.
+Compiling vhdl file "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/plb_bram_if_cntlr_1_bram_wrapper.vhd" in Library work.
+Entity <plb_bram_if_cntlr_1_bram_wrapper> compiled.
+Entity <plb_bram_if_cntlr_1_bram_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <plb_bram_if_cntlr_1_bram_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <plb_bram_if_cntlr_1_bram_elaborate> in library <plb_bram_if_cntlr_1_bram_elaborate_v1_00_a> (architecture <STRUCTURE>) with generics.
+	C_FAMILY = "virtex2p"
+	C_PORT_DWIDTH = 64
+	C_NUM_WE = 8
+	C_PORT_AWIDTH = 32
+	C_MEMSIZE = 131072
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <plb_bram_if_cntlr_1_bram_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set user-defined property "KEEP_HIERARCHY =  yes" for unit <plb_bram_if_cntlr_1_bram_wrapper>.
+    Set user-defined property "X_CORE_INFO =  plb_bram_if_cntlr_1_bram_elaborate_v1_00_a" for unit <plb_bram_if_cntlr_1_bram_wrapper>.
+    Set user-defined property "KEEP_HIERARCHY =  yes" for unit <plb_bram_if_cntlr_1_bram_elaborate>.
+Entity <plb_bram_if_cntlr_1_bram_wrapper> analyzed. Unit <plb_bram_if_cntlr_1_bram_wrapper> generated.
+
+Analyzing generic Entity <plb_bram_if_cntlr_1_bram_elaborate> in library <plb_bram_if_cntlr_1_bram_elaborate_v1_00_a> (Architecture <STRUCTURE>).
+	C_FAMILY = "virtex2p"
+	C_MEMSIZE = 131072
+	C_NUM_WE = 8
+	C_PORT_AWIDTH = 32
+	C_PORT_DWIDTH = 64
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 86: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_0> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_0> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 108: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_1> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_1> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 130: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_2> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_2> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 152: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_3> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_3> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 174: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_4> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_4> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 196: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_5> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_5> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 218: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_6> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_6> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 240: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_7> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_7> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 262: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_8> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_8> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 284: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_9> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_9> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 306: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_10> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_10> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 328: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_11> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_11> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 350: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_12> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_12> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 372: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_13> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_13> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 394: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_14> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_14> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 416: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_15> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_15> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 438: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_16> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_16> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 460: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_17> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_17> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 482: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_18> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_18> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 504: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_19> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_19> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 526: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_20> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_20> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 548: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_21> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_21> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 570: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_22> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_22> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 592: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_23> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_23> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 614: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_24> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_24> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 636: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_25> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_25> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 658: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_26> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_26> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 680: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_27> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_27> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 702: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_28> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_28> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 724: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_29> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_29> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 746: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_30> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_30> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 768: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_31> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_31> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 790: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_32> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_32> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 812: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_33> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_33> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 834: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_34> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_34> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 856: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_35> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_35> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 878: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_36> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_36> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 900: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_37> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_37> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 922: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_38> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_38> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 944: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_39> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_39> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 966: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_40> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_40> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 988: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_41> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_41> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1010: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_42> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_42> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1032: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_43> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_43> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1054: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_44> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_44> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1076: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_45> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_45> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1098: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_46> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_46> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1120: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_47> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_47> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1142: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_48> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_48> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1164: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_49> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_49> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1186: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_50> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_50> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1208: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_51> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_51> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1230: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_52> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_52> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1252: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_53> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_53> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1274: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_54> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_54> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1296: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_55> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_55> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1318: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_56> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_56> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1340: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_57> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_57> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1362: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_58> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_58> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1384: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_59> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_59> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1406: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_60> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_60> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1428: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_61> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_61> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1450: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_62> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_62> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1472: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_63> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_63> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+Entity <plb_bram_if_cntlr_1_bram_elaborate> analyzed. Unit <plb_bram_if_cntlr_1_bram_elaborate> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Related source file is "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd".
+WARNING:Xst:647 - Input <BRAM_Addr_A<0:14>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_A<29:31>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_B<0:14>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_B<29:31>> is never used.
+Unit <plb_bram_if_cntlr_1_bram_elaborate> synthesized.
+
+
+Synthesizing Unit <plb_bram_if_cntlr_1_bram_wrapper>.
+    Related source file is "/home/proyecto/Proyecto/XUPV2P-MicheAngelo/hdl/plb_bram_if_cntlr_1_bram_wrapper.vhd".
+Unit <plb_bram_if_cntlr_1_bram_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment /opt/Xilinx.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <plb_bram_if_cntlr_1_bram_wrapper> ...
+
+Optimizing unit <plb_bram_if_cntlr_1_bram_elaborate> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 342
+
+Cell Usage :
+# RAMS                             : 64
+#      RAMB16_S1_S1                : 64
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                       0  out of  13696     0%  
+ Number of IOs:                        342
+ Number of bonded IOBs:                  0  out of    556     0%  
+ Number of BRAMs:                       64  out of    136    47%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                         | Load  |
+-----------------------------------+-----------------------------------------------+-------+
+BRAM_Clk_A                         | NONE(plb_bram_if_cntlr_1_bram/ramb16_s1_s1_40)| 64    |
+BRAM_Clk_B                         | NONE(plb_bram_if_cntlr_1_bram/ramb16_s1_s1_52)| 64    |
+-----------------------------------+-----------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 0.219ns
+   Maximum output required time after clock: 1.401ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BRAM_Clk_A'
+  Total number of paths / destination ports: 1088 / 1088
+-------------------------------------------------------------------------
+Offset:              0.219ns (Levels of Logic = 1)
+  Source:            BRAM_Addr_A<15> (PAD)
+  Destination:       plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 (RAM)
+  Destination Clock: BRAM_Clk_A rising
+
+  Data Path: BRAM_Addr_A<15> to plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'plb_bram_if_cntlr_1_bram'
+     RAMB16_S1_S1:ADDRA13        0.219          ramb16_s1_s1_0
+    ----------------------------------------
+    Total                      0.219ns (0.219ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BRAM_Clk_B'
+  Total number of paths / destination ports: 1088 / 1088
+-------------------------------------------------------------------------
+Offset:              0.219ns (Levels of Logic = 1)
+  Source:            BRAM_Addr_B<15> (PAD)
+  Destination:       plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 (RAM)
+  Destination Clock: BRAM_Clk_B rising
+
+  Data Path: BRAM_Addr_B<15> to plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'plb_bram_if_cntlr_1_bram'
+     RAMB16_S1_S1:ADDRB13        0.219          ramb16_s1_s1_0
+    ----------------------------------------
+    Total                      0.219ns (0.219ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BRAM_Clk_B'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              1.401ns (Levels of Logic = 1)
+  Source:            plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 (RAM)
+  Destination:       BRAM_Din_B<0> (PAD)
+  Source Clock:      BRAM_Clk_B rising
+
+  Data Path: plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 to BRAM_Din_B<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S1_S1:CLKB->DOB0    0   1.401   0.000  ramb16_s1_s1_0 (BRAM_Din_B<0>)
+     end scope: 'plb_bram_if_cntlr_1_bram'
+    ----------------------------------------
+    Total                      1.401ns (1.401ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BRAM_Clk_A'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              1.401ns (Levels of Logic = 1)
+  Source:            plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 (RAM)
+  Destination:       BRAM_Din_A<0> (PAD)
+  Source Clock:      BRAM_Clk_A rising
+
+  Data Path: plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 to BRAM_Din_A<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S1_S1:CLKA->DOA0    0   1.401   0.000  ramb16_s1_s1_0 (BRAM_Din_A<0>)
+     end scope: 'plb_bram_if_cntlr_1_bram'
+    ----------------------------------------
+    Total                      1.401ns (1.401ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+CPU : 3.82 / 3.84 s | Elapsed : 4.00 / 4.00 s
+ 
+--> 
+
+
+Total memory usage is 177488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   68 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

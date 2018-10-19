@@ -1,0 +1,93 @@
+\chapter{\emph{Root File System}}
+
+
+\section{Introducción}
+
+El sistema de archivos \emph{root file system} se encuentra localizado en la
+misma partición en donde esta el directoio \emph{root} y es el sistema de
+archivos en donde cualquier otro sistema de archivos serán montados.
+
+Una partición es una seción lógica independiente de una unidad de
+almacenamiento, un sistema de archivos es una jerarquia de directorios
+utilizada para organizar los archivos de un istema de cómputo, en Linux, se
+comienza con el directoio \emph{root}, el cual contiene una serie de
+subdirectorios,cada uno  a su vez contiene directorios adicionales, etc. 
+
+
+El contenido exacto del \emph{root file system}  puede variar en cada sistema
+de cómputo, pero puede inclur los archivos necesarios para el arranque del
+sistema, asi como también los archivos necesarios para montar otros sistemas de
+archivos. El contenido del directorio \emph{root} junto con una cantidad mínima
+de directorios incluyen los directorios \emph{/boot, /dev, /etc, /bin, /sbin}.
+
+El  \emph{root file system} es generalmente pequeño, lo que ayuda a evitar que
+el sistema de archivos sea corrupto, Un sistema de archivos corrupto puede
+evitar el arranque del sistema\cite{rootfs}.
+
+\section{\emph{BuildRoot}}
+
+\emph{BuildRoot} es una serie de archivos de configuración que permiten la
+creacion de un entorno de compilación cruzada mediante el uso de una
+\emph{toolchain}, \emph{BuildRoot} es capaz de construir un sitema de archivos
+(\emph{root file system}) o una imagen de Linux, ambas funciones pueden ser
+usadas de forma independiente.
+
+Además \emph{BuildRoot} proveé una inferstructura que permite reproducir el
+proceso de desarrollo de un \emph{root file system}, esto es particularmente
+útil cuando es necesario depurar, actualizar o agregar parches a un sistema de
+archivos creado anteriormente\cite{buildroot}.
+
+\emph{BuildRoot} se pude obtener suando Git\footnote{Git, es un software de
+control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la
+confiabilidad del mantenimiento de versiones de aplicaciones cuando estas tienen
+un gran número de archivos de código fuente.} a travéz del siguiente comando :
+\begin{verbatim}
+  Proyecto@debian: git clone git://git.buildroot.net/buildroot
+\end{verbatim}
+
+\subsection{Configuración y uso general}
+
+\emph{BuildRoot} tiene un configuración similar a la del \emph{kernel} de
+Linux, por lo que se puede generar la configuración desde un asistente
+ejecutando:
+\begin{verbatim}
+  Proyecto@debian: make menuconfig
+\end{verbatim}
+
+El archivo de configuración ``.config'' de \emph{BuildRoot}  se muestra en el
+\emph{Apéndice B}.
+
+Una vez que se han configurado todos los componentes que tendrá el \emph{root
+file system} se procede a compilar el sistema de archivos con el comando:
+\begin{verbatim}
+  Proyecto@debian: make 
+\end{verbatim}
+
+Este comando realizará los siguientes pasos:
+\begin{itemize}
+ \item Descargara las fuentes necesarias.
+ \item Configurará, instalará o importará la \emph{toolchain} que usara para
+compilar los paquetes seleccionados en la configuración.
+ \item Constriurá e instalará los paquetes objetivo.
+ \item Creará el sistema de archivos en el formato seleccionado (\emph{ext2}
+para este protecto).
+\end{itemize}
+
+La salida generada por \emph{BuildRoot} será almacenada en el directorio
+\emph{``output/''}, este directorio contiene a su vez los siguientes
+directorios:
+\begin{itemize}
+ \item \emph{``images/''}, en donde se encuentran todas las las imagenes 
+guardadas
+(kernel, sistema de archivos).
+ \item \emph{``build/''}, contiene todos los compenentes que serán construidos.
+ \item \emph{``staging/''}, contiene una jerarquía similar  ala que se generará
+ el \emph{root file system}.
+ \item \emph{``target/''}, contiene el \emph{root file system} completo.
+ \item \emph{``host/''}, contiene las herramientas necesarias para la
+compilación del \emph{root file system} desde el sistema huesped.
+ \item \emph{``toolchain/''}, contiene los componentes de la \emph{toolchain}.
+\end{itemize}
+
+
+

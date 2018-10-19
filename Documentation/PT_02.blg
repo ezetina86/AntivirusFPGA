@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: PT_02.aux
+The style file: ezspanish.bst
+A level-1 auxiliary file: titlepage.aux
+A level-1 auxiliary file: resumen.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: gracias.aux
+A level-1 auxiliary file: intro.aux
+A level-1 auxiliary file: fpga.aux
+A level-1 auxiliary file: diseno.aux
+A level-1 auxiliary file: soperativo.aux
+A level-1 auxiliary file: compilacion.aux
+A level-1 auxiliary file: filesystem.aux
+A level-1 auxiliary file: minimal.aux
+A level-1 auxiliary file: antivirus.aux
+A level-1 auxiliary file: implementacion.aux
+A level-1 auxiliary file: apendiceA.aux
+A level-1 auxiliary file: apendiceB.aux
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "system"
+Warning--missing publisher in buildroot
+Warning--empty year in compilacion
+Warning--empty year in raghavan2005embedded
+You've used 22 entries,
+            2833 wiz_defined-function locations,
+            717 strings with 7551 characters,
+and the built_in function-call counts, 10007 in all, are:
+= -- 769
+> -- 322
+< -- 19
++ -- 123
+- -- 99
+* -- 559
+:= -- 1641
+add.period$ -- 89
+call.type$ -- 22
+change.case$ -- 123
+chr.to.int$ -- 22
+cite$ -- 25
+duplicate$ -- 813
+empty$ -- 879
+format.name$ -- 143
+if$ -- 2000
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 176
+newline$ -- 136
+num.names$ -- 88
+pop$ -- 423
+preamble$ -- 1
+purify$ -- 121
+quote$ -- 0
+skip$ -- 344
+stack$ -- 0
+substring$ -- 246
+swap$ -- 293
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 147
+warning$ -- 3
+while$ -- 66
+width$ -- 0
+write$ -- 313
+(There were 4 warnings)

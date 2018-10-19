@@ -1,0 +1,52 @@
+\chapter{Objetivos}
+
+\section{Objetivo general}
+
+
+Diseñar e implementar un sistema de seguridad para redes de \'area local
+en la tarjeta de desarrollo NetFPGA\footnote{NetFPGA, es una plataforma de bajo
+costo, diseñada principalmente como una herramienta para la enseñanza de
+hardware de redes \cite{netfpga}.} que permita bloquear el tráfico no autorizado
+a una red y admita al mismo tiempo comunicaciones autorizadas.
+
+\subsection{Objetivos específicos}
+\begin{itemize} 
+
+    \item Implementar un sistema operativo basado en Linux\footnote{Linux,
+    es un núcleo libre usado en sistemas operativos de código
+    abierto\cite{linux}.} en la tarjeta de desarrollo NetFPGA el cual
+    incluya los m\'odulos necesarios para la detecci\'on	
+    de virus, filtrado de paquetes y acceso remoto.
+% 
+%     \item Construir en la tarjeta de desarrollo
+%     NetFPGA un    sistema capaz de detectar
+%     \emph{malware}\footnote{\emph{Malware}, es un tipo    de software que tiene
+%     como objetivo infiltrarse o dañar una computadora sin    el consentimiento
+%     de su propietario.} como troyanos\footnote{Troyano, es un
+%     software malicioso que se presenta al usuario como un programa aparentemente
+%     legítimo e inofensivo pero que al ejecutarlo ocasiona daños.},
+%     virus\footnote{Virus informático, es un programa con intenciones malignas,
+%     que es capaz de propagarse de una computadora a otra.} y otras amenazas
+%     maliciosas, con la finalidad de  proteger los datos que circulan por
+%     la red de amenazas o p\'erdidas.
+% 
+%     \item Configurar un \emph { firewall }\footnote{ \emph {Firewall} o
+%     cortafuegos, es un dispositivo configurado para permitir, limitar, cifrar y
+%      decifrar el tráfico de paquetes en una red de
+%     computadoras\cite{Firewall}.} en la tarjeta de desarrollo NetFPGA,
+%     para filtrar paquetes y evitar intrusiones en la red.
+% 
+% 
+%     \item Configurar el servicio DHCP\footnote{DHCP, acrónimo de \emph{Dynamic
+%     Host Configuration Protocol}, es un protocolo que permite a dispositivos
+%     individuales en una red de direcciones IP obtener su propia información de
+%     configuración de red\cite{DHCP}.} en  en la tarjeta de desarrollo NetFPGA,
+%     que permita  contar con una  lista de direcciones IP din\'amicas y
+%     asignarlas a los equipos conforme \'estas estan disponibles.
+% 
+%     \item Configurar en la terjeta de desarrollo NetFPGA el servicio
+%     \emph{OpenSSH}\footnote{OpenSSH, acrónimo de \emph{Open Secure Shell}, es un
+%     conjunto de aplicaciones que permiten realizar comunicaciones cifradas a
+%     través de una red, usando el protocolo SSH\cite{OpenSSH}.}, para poder
+%     acceder a el dispositivo de forma remota.
+\end{itemize}

@@ -1,0 +1,363 @@
+zImage starting: loaded at 0x00800000 (sp: 0x00a30eb0)
+Allocating 0x515b48 bytes for kernel ...
+gunzipping (0x00000000 <- 0x0080c000:0x00a2fc4f)...done 0x4a6000 bytes
+
+Linux/PowerPC load: console=ttyUL0,115200 root=/dev/xs`2 rw ip=dhcp
+Finalizing device tree... flat tree at 0xa3d0e0
+[    0.000000] Using Xilinx Virtex machine description
+[    0.000000] Cannot reserve gpages without hugetlb enabled
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.2.0 (proyecto@debian) (gcc version 4.2.4) #6 Wed Oct 17 16:16:35 CDT 2012
+[    0.000000] Zone PFN ranges:
+[    0.000000]   DMA      0x00000000 -> 0x00008000
+[    0.000000]   Normal   empty
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start PFN for each node
+[    0.000000] early_node_map[1] active PFN ranges
+[    0.000000]     0: 0x00000000 -> 0x00008000
+[    0.000000] MMU: Allocated 1088 bytes of context maps for 255 contexts
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line: console=ttyUL0,115200 root=/dev/xs`2 rw ip=dhcp
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Memory: 124660k/131072k available (4528k kernel code, 6412k reserved, 232k data, 446k bss, 160k init)
+[    0.000000] Kernel virtual memory layout:
+[    0.000000]   * 0xfffcf000..0xfffff000  : fixmap
+[    0.000000]   * 0xff800000..0xffc00000  : highmem PTEs
+[    0.000000]   * 0xff600000..0xff800000  : consistent mem
+[    0.000000]   * 0xff600000..0xff600000  : early ioremap
+[    0.000000]   * 0xc9000000..0xff600000  : vmalloc & ioremap
+[    0.000000] SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:512
+[    0.000000] clocksource: timebase mult[d55555] shift[22] registered
+[    0.000000] Console: colour dummy device 80x25
+[    0.000484] pid_max: default: 32768 minimum: 301
+[    0.001344] Security Framework initialized
+[    0.001421] SELinux:  Disabled at boot.
+[    0.001780] Mount-cache hash table entries: 512
+[    0.003504] Initializing cgroup subsys cpuacct
+[    0.003637] Initializing cgroup subsys devices
+[    0.003674] Initializing cgroup subsys freezer
+[    0.003705] Initializing cgroup subsys net_cls
+[    0.009644] devtmpfs: initialized
+[    0.013495] print_constraints: dummy: 
+[    0.014524] NET: Registered protocol family 16
+[    0.030590] bio: create slab <bio-0> at 0
+[    0.035472] Switching to clocksource timebase
+[    0.114029] NET: Registered protocol family 2
+[    0.114864] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.117452] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.117989] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.118303] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.118341] TCP reno registered
+[    0.118398] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.118511] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.120010] NET: Registered protocol family 1
+[    0.121719] RPC: Registered named UNIX socket transport module.
+[    0.121771] RPC: Registered udp transport module.
+[    0.121802] RPC: Registered tcp transport module.
+[    0.121834] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.129091] audit: initializing netlink socket (disabled)
+[    0.129240] type=2000 audit(0.124:1): initialized
+[    0.318356] VFS: Disk quotas dquot_6.5.2
+[    0.319305] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.324427] msgmni has been set to 243
+[    0.328572] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    0.328628] io scheduler noop registered
+[    0.328659] io scheduler deadline registered
+[    0.328846] io scheduler cfq registered (default)
+[    0.683066] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.687431] 40600000.serial: ttyUL0 at MMIO 0x40600000 (irq = 17) is a uartlite
+[    1.025776] console [ttyUL0] enabled
+[    1.057720] brd: module loaded
+[    1.073884] loop: module loaded
+[    1.076402] xsysace 41800000.sysace: Xilinx SystemACE revision 1.0.12
+[    1.083930] xsysace 41800000.sysace: capacity: 1969632 sectors
+[    1.097252]  xs`: xs`1 xs`2
+[    1.101856] Xilinx SystemACE device driver, major=254
+[    1.107395] nbd: registered device at major 43
+[    1.141578] xilinx_emaclite 40e00000.ethernet: Device Tree Probing
+[    1.146860] xilinx_emaclite 40e00000.ethernet: error registering MDIO bus
+[    1.153336] xilinx_emaclite 40e00000.ethernet: MAC address is now 00:0a:35:0b:8a:00
+[    1.163688] xilinx_emaclite 40e00000.ethernet: Xilinx EmacLite at 0x40E00000 mapped to 0xC9020000, irq=16
+[    1.173682] mousedev: PS/2 mouse device common for all mice
+[    1.182492] TCP cubic registered
+[    1.187503] NET: Registered protocol family 10
+[    1.203974] Mobile IPv6
+[    1.205159] NET: Registered protocol family 17
+[    1.209819] Registering the dns_resolver key type
+[    1.216868] registered taskstats version 1
+[    1.220058] drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+[    1.226178] Initializing network drop monitor service
+[    1.247702] Sending DHCP requests ., OK
+[    1.483797] IP-Config: Got DHCP answer from 192.168.1.1, my address is 192.168.1.110
+[    1.491658] IP-Config: Complete:
+[    1.493797]      device=eth0, addr=192.168.1.110, mask=255.255.255.0, gw=192.168.1.1,
+[    1.501318]      host=192.168.1.110, domain=, nis-domain=(none),
+[    1.507363]      bootserver=192.168.1.1, rootserver=192.168.1.1, rootpath=[    1.534640] EXT2-fs (xs`2): warning: mountind
+[    1.665305] VFS: Mounted root (ext2 filesystem) on device 4095:1048562.
+[    1.673059] Freeing unused kernel memory: 160k freed
+Starting logging: OK
+Initializing random number generator... done.
+Starting network...
+RTNETLINK answers: File exists
+Generating RSA Key...
+Generating public/private rsa1 key pair.
+Your identification has been saved in /etc/ssh_host_key.
+Your public key has been saved in /etc/ssh_host_key.pub.
+The key fingerprint is:
+d7:2c:95:b1:0d:21:b1:db:2c:4d:ae:55:c9:14:77:5c 
+The key's randomart image is:
++--[RSA1 2048]----+
+|          o.+.ooE|
+|           o O oo|
+|          . = =  |
+|           @ .   |
+|        S = O    |
+|         . =     |
+|          .      |
+|                 |
+|                 |
++-----------------+
+Generating RSA Key...
+Generating public/private rsa key pair.
+Your identification has been saved in /etc/ssh_host_rsa_key.
+Your public key has been saved in /etc/ssh_host_rsa_key.pub.
+The key fingerprint is:
+26:94:76:b7:b0:af:04:4e:c0:38:fd:35:c7:d9:93:e7 
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|   +   . . o .   |
+|  o + + = = + .  |
+|   . = o * . +   |
+|      = S .   E  |
+|     o + .       |
+|      . . .      |
+|       . .       |
+|        .        |
++-----------------+
+Generating DSA Key...
+THIS CAN TAKE A MINUTE OR TWO DEPENDING ON YOUR PROCESSOR!
+
+Generating public/private dsa key pair.
+Your identification has been saved in /etc/ssh_host_dsa_key.
+Your public key has been saved in /etc/ssh_host_dsa_key.pub.
+The key fingerprint is:
+27:0d:e6:71:72:64:53:f4:21:64:4e:4d:b3:ee:c8:00 
+The key's randomart image is:
++--[ DSA 1024]----+
+|          ++Bo+  |
+|         o = o.+ |
+|        E o . o  |
+|       o O   .   |
+|        S +   .  |
+|         o o o   |
+|            o .  |
+|                 |
+|                 |
++-----------------+
+Generating ECDSA Key...
+THIS CAN TAKE A MINUTE OR TWO DEPENDING ON YOUR PROCESSOR!
+
+Generating public/private ecdsa key pair.
+Your identification has been saved in /etc/ssh_host_ecdsa_key.
+Your public key has been saved in /etc/ssh_host_ecdsa_key.pub.
+The key fingerprint is:
+ed:02:31:4e:98:09:51:bc:82:6b:1a:7e:f2:7c:f1:0e 
+The key's randomart image is:
++--[ECDSA  256]---+
+|  o+.            |
+|   ..+           |
+| .  +.+          |
+|. . .o o .       |
+| . .  o S .      |
+|o.   . . .       |
+|+.   Eo . .      |
+|.o.. ... .       |
+|  +o. ..         |
++-----------------+
+Starting sshd: OK
+
+XUPV2P-MicheAngelo
+XUPV2P-MicheAngelo login: root
+[root@XUPV2P-MicheAngelo ~]# ls
+[root@XUPV2P-MicheAngelo ~]# ssh proyecto@192.168.1.102
+The authenticity of host '192.168.1.102 (192.168.1.102)' can't be established.
+RSA key fingerprint is cc:7b:d1:cd:d0:17:a7:1c:ae:2c:a5:89:26:a3:1f:61.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.1.102' (RSA) to the list of known hosts.
+proyecto@192.168.1.102's password: 
+Permission denied, please try again.
+proyecto@192.168.1.102's password: 
+Linux debian 2.6.32-5-686 #1 SMP Sun Sep 23 09:49:36 UTC 2012 i686
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+You have mail.
+Last login: Tue Oct  9 16:33:19 2012 from 192.168.1.109
+__  ___   _ ____ ______     ______  
+\ \/ / | | |  _ \___ \ \   / /___ \ 
+ \  /| | | | |_) |__) \ \ / /  __) |
+ /  \| |_| |  __// __/ \ V /  / __/ 
+/_/\_\\___/|_|  |_____| \_/  |_____|
+[root@XUPV2P-MicheAngelo ~]# ls
+[root@XUPV2P-MicheAngelo ~]# cd /
+[root@XUPV2P-MicheAngelo /]# ls
+bin/           lib/           opt/           run@           usr/
+dev/           linuxrc@       proc/          sbin/          var/
+etc/           media/         root/          sys/
+home/          mnt/           rootfs.tar.gz  tmp/
+[root@XUPV2P-MicheAngelo /]# cd opt/
+[root@XUPV2P-MicheAngelo opt]# ls
+[root@XUPV2P-MicheAngelo opt]# cd ..
+[root@XUPV2P-MicheAngelo /]# cd ..
+[root@XUPV2P-MicheAngelo /]# ls /bin/
+addgroup@      df@            iproute@       mv@            sleep@
+adduser@       dmesg@         iprule@        netstat@       stty@
+ash@           dnsdomainname@ iptunnel@      nice@          su@
+bash*          dumpkmap@      kill@          pidof@         sync@
+busybox*       echo@          linux32@       ping@          tar@
+cat@           egrep@         linux64@       pipe_progress@ touch@
+catv@          false@         ln@            printenv@      true@
+chattr@        fdflush@       login@         ps@            umount@
+chgrp@         fgrep@         ls@            pwd@           uname@
+chmod@         getopt@        lsattr@        rm@            usleep@
+chown@         grep@          mkdir@         rmdir@         vi@
+cp@            gunzip@        mknod@         run-parts@     watch@
+cpio@          gzip@          mktemp@        sed@           zcat@
+date@          hostname@      more@          setarch@
+dd@            ip@            mount@         setserial@
+delgroup@      ipaddr@        mountpoint@    sh@
+deluser@       iplink@        mt@            sh.prebash@
+[root@XUPV2P-MicheAngelo /]# ls -lh /bin/
+total 1400
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 addgroup -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 adduser -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 ash -> busybox*
+-rwxr-xr-x    1 root     root      751.5K Oct 23  2012 bash*
+-rwsr-xr-x    1 root     root      636.4K Oct 23  2012 busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 cat -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 catv -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 chattr -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 chgrp -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 chmod -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 chown -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 cp -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 cpio -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 date -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 dd -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 delgroup -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 deluser -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 df -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 dmesg -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 dnsdomainname -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 dumpkmap -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 echo -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 egrep -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 false -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 fdflush -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 fgrep -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 getopt -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 grep -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 gunzip -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 gzip -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 hostname -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 ip -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 ipaddr -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 iplink -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 iproute -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 iprule -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 iptunnel -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 kill -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 linux32 -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 linux64 -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 ln -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 login -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 ls -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 lsattr -> busybox*
+lrwxrwxrwx    1 root     root           7 Oct 23  2012 mkdir -> busybox*
+[root@XUPV2P-MicheAngelo /]# ls /bin/
+addgroup@      df@            iproute@       mv@            sleep@
+adduser@       dmesg@         iprule@        netstat@       stty@
+ash@           dnsdomainname@ iptunnel@      nice@          su@
+bash*          dumpkmap@      kill@          pidof@         sync@
+busybox*       echo@          linux32@       ping@          tar@
+cat@           egrep@         linux64@       pipe_progress@ touch@
+catv@          false@         ln@            printenv@      true@
+chattr@        fdflush@       login@         ps@            umount@
+chgrp@         fgrep@         ls@            pwd@           uname@
+chmod@         getopt@        lsattr@        rm@            usleep@
+chown@         grep@          mkdir@         rmdir@         vi@
+cp@            gunzip@        mknod@         run-parts@     watch@
+cpio@          gzip@          mktemp@        sed@           zcat@
+date@          hostname@      more@          setarch@
+dd@            ip@            mount@         setserial@
+delgroup@      ipaddr@        mountpoint@    sh@
+deluser@       iplink@        mt@            sh.prebash@
+[root@XUPV2P-MicheAngelo /]# cd
+[root@XUPV2P-MicheAngelo ~]# uname -a
+Linux XUPV2P-MicheAngelo 3.2.0 #6 Wed Oct 17 16:16:35 CDT 2012 ppc GNU/Linux
+[root@XUPV2P-MicheAngelo ~]# cat /proc/cpuinfo 
+processor       : 0
+cpu             : Virtex-II Pro
+clock           : 300.000000MHz
+revision        : 8.160 (pvr 2001 08a0)
+bogomips        : 600.00
+timebase        : 300000000
+platform        : Xilinx Virtex
+model           : testing
+Memory          : 128 MB
+[root@XUPV2P-MicheAngelo ~]# cat /proc/memory  
+cat: can't open '/proc/memory': No such file or directory
+[root@XUPV2P-MicheAngelo ~]# cat /proc/meminfo 
+MemTotal:         124820 kB
+MemFree:          113268 kB
+Buffers:             240 kB
+Cached:             6376 kB
+SwapCached:            0 kB
+Active:             4308 kB
+Inactive:           3116 kB
+Active(anon):        824 kB
+Inactive(anon):        8 kB
+Active(file):       3484 kB
+Inactive(file):     3108 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:             0 kB
+HighFree:              0 kB
+LowTotal:         124820 kB
+LowFree:          113268 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                16 kB
+Writeback:             0 kB
+AnonPages:           816 kB
+Mapped:             2012 kB
+Shmem:                24 kB
+Slab:               3584 kB
+SReclaimable:        780 kB
+SUnreclaim:         2804 kB
+KernelStack:         216 kB
+PageTables:          128 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:       62408 kB
+Committed_AS:       2264 kB
+VmallocTotal:     890880 kB
+VmallocUsed:         160 kB
+VmallocChunk:     890684 kB
+[root@XUPV2P-MicheAngelo ~]# ip
+ip                 ipaddr             iproute            iptables-save
+ip6tables          ipcrm              iprule             iptables-xml
+ip6tables-restore  ipcs               iptables           iptunnel
+ip6tables-save     iplink             iptables-restore   
+[root@XUPV2P-MicheAngelo ~]#                                             
+

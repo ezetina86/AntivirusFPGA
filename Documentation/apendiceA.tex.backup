@@ -1,0 +1,117 @@
+\chapter{Instalaciòn Xilinx ISE, Xilinx EDK para NetFPGA en Linux}\label{ApexA}
+
+
+
+\section{Herramientas}
+
+\begin{itemize}
+ \item Linux Debian 6.0, Linux Fedora 17, CentOS 6.3
+ \item Xilinx EDK 10.1i
+ \item Tarjeta de desarrollo NetFPGA
+ \item Bibliotecas libusb y usb-driver
+%  \item minicom
+\end{itemize}
+
+
+\section{Requerimeintos}
+
+\section{Instalación del ISE y EDK}
+
+
+Se deberá de  montar la imágen para acceder a los archivos. 
+Para montar algún dispositivo o imágen se debe contar con privilegios de 
+super-usuario:
+
+  \begin{listing}[style=C, numbers=none]
+  #mount -o loop imagenISO-ISE.iso /mnt   
+  \end{listing}
+
+La ruta de instalación será:
+
+  \begin{listing}[style=C, numbers=none]
+  #/mnt/setup 
+  \end{listing}
+  
+\begin{figure}[ht]
+  \begin{center}
+ \includegraphics[scale=.40]{./figuras/Installer.png}
+  \caption{Pantalla de instalaciòn ISE 10.1}
+ \label{Pantalla instalaciòn ISE 10.1}
+ % Installer.png: 971x691 pixel, 72dpi, 34.25x24.38 cm, bb=0 0 971 691
+ \end{center}
+\end{figure}
+
+% Pass: 1472AKH27AD266UHKE980RNMB
+
+En un sistema de escritorio personalizado la instalación creará un directorio
+en su \emph{home} llamado Xilinx.
+
+Seleccionamos solo los módulos que necesitamos:
+\begin{itemize}
+ \item Standalone Programming Tools
+ \item ISE Design Tools
+ \item Embedded Development Kit (EDK)
+ \item ChipScope Pro
+ \item PlanAhead Analysis Tool/PlanAhead Lite
+\end{itemize}
+
+
+\begin{figure}[ht]
+  \begin{center}
+ \includegraphics[scale=.40]{./figuras/Modules_install.png}
+  \caption{Módulos a instalar}
+ \label{Módulos a instalar ISE 10.1}
+ % Installer.png: 971x691 pixel, 72dpi, 34.25x24.38 cm, bb=0 0 971 691
+ \end{center}
+\end{figure}
+
+Se selecciona un directorio para a instalaciòn:
+
+  \begin{listing}[style=C, numbers=none]
+  /opt/Xilinx/10.1 
+  \end{listing}
+  
+  \begin{figure}[ht]
+  \begin{center}
+ \includegraphics[scale=.40]{./figuras/Directory.png}
+  \caption{Directorio de instalaciòn}
+ \label{Directorio de instalaciòn ISE 10.1}
+ % Installer.png: 971x691 pixel, 72dpi, 34.25x24.38 cm, bb=0 0 971 691
+ \end{center}
+\end{figure}
+
+\section{Ejecución del ISE y EDK}
+
+
+Para lanzar tanto ISE como el EDK, será necesario crear variables de ambiente
+para la relación de sus aplicaciones, se han creado dos  \emph{scripts} que
+facilitan la ejecución, \emph{ise.sh} permite la ejecución de ISE :
+
+\lstinputlisting[language=sh]{./code/ise.sh}
+
+se agregan permisos de ejecución:
+
+  \begin{listing}[style=C, numbers=none]	
+  root@debian:~#chmod +x ise.sh
+  \end{listing}
+ 
+
+\emph{edk.sh} permite la ejecución de EDK :
+
+\lstinputlisting[language=sh]{./code/edk.sh}
+
+se agregan permisos de ejecución:
+
+  \begin{listing}[style=C, numbers=none]	
+  root@debian:~#chmod +x edk.sh
+  \end{listing}
+
+ se agrenan las siguientes líneas al final del archivo \emph{.bashrc}
+ 
+   \begin{listing}[style=C, numbers=none]	
+  # User specific aliases and functions
+  alias ise=' ./NetFPGA/ise.sh &'
+  alias edk=' ./NetFPGA/edk.sh &'
+  \end{listing}
+
+

@@ -1,0 +1,70 @@
+\chapter{Antivirus}
+
+\section{Introducción}
+
+La información es hoy la materia prima de las organizaciones. Tener información
+ayuda a tomar decisiones con seguridad y rapidez. Por tanto, proteger la
+información en todo momento y permitir el acceso a ella sólo para las personas
+que la necesiten y que, además, sea fiable, es un tema fundamental.
+
+Los virus inform\'aticos son hoy una realidad reconocida por las empresas,
+quienes saben que es un problema que mina su productividad, ya que sus
+computadoras est\'an constantemente expuestas a vulnerabilidades de sus sistemas
+de seguridad.
+
+Actualmente los FPGAs son dispositivos que permiten la implementaci\'on de
+complejos sistemas de seguridad basados en \emph{hardware} o \emph{software}
+ofreciendo a los desarrolladores una alta gama de posibilidades de implementar
+sus sistemas en ellos.
+
+\section{¿Qué es el  \emph{malware}?}
+
+\emph{Malware}, es un \emph{software} o un fragmento de \emph{software}
+diseñado para causar daños a los sistemas de cómputo, la expresión que viene de
+la union de las palabras \emph{malicious} y \emph{software}, es un termino
+general que cubre diferentes tipos de \emph{software} dañino\cite{avoine}.
+
+\section{¿Qué es un virus informático?}
+
+Un virus, es un \emph{software} o un fragmento de \emph{software} introducido
+subrepticiamente en la memoria de una computadora que, al activarse, destruye
+total o parcialmente la información almacenada, esta diseñado para propagarse de
+un equipo a otro e interferir en el funcionamiendo de los mismos\cite{lehtinen}.
+
+Los virus comienzan a ejecutarse cuando inicia el programa que lo contiene. El
+virus puede reproducirse asi mismo, en mucho casos los virus necesitan
+reproducirse para poder ser una verdadera amenaza. Los virus pueden
+reporducirse de forma inmediata o hasta que algún evento que propicie su
+reproducción. Por ejemplo, en una fecha exacta ( como con el famoso virus
+\emph{Friday the 13th\footnote{\emph{Friday the 13th}, fue un virus
+que consistía en borrar cada programa que fuera ejecutado en una
+computadora, cada dia viernes 13.}})
+
+Recientemente  fue necesario que un usuario acivara un virus ejecutando un
+programa corrupto, el cual pudo ser abierto desde algun archivo oculto en un
+correo electrónico. La mayoria de los lectores de correo electrónico actuales
+tienen la posibilidad de incluir archivos adjuntos dentro del correo
+electrónico, por lo que ataquentes buscan incluir \emph{malware} en estos
+archivos.
+
+\subsection{Antivirus}
+
+Actualmente, existen multitud de sistemas de seguridad basados en
+\emph{software}. Algunos proporcionan estabilidad aceptable y están integrados
+en el sistema operativo, otros por ejemplo, son únicamente interfaces gráficas
+que facilitan la tarea de gestionar la seguridad de un sistema de cómputo a la
+mayoría de usuarios y, además, proporcionan seguridad por defecto para un uso
+básico. Estos últimos, en entornos de mayor exigencia, no proporcionan una
+respuesta fiable a un ataque informático.
+
+
+% \section{¿Qué es el SPAM?}
+% 
+% Se define SPAM a los mensajes no solicitados, habitualmente de tipo
+% publicitario, enviados en forma masiva. La vía más utilizada es la basada en el
+% correo electrónico pero puede presentarse por programas de mensajería
+% instantánea o por teléfono celular.
+% 
+% El término spam tiene su origen en el jamón especiado (\emph{SPiced hAM}),
+% primer producto de carne enlatada que no necesitaba frigorífico para su
+% conservación.

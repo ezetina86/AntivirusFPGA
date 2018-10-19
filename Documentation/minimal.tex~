@@ -1,0 +1,230 @@
+\chapter{Primer entorno generado}
+
+\section{Introducción}
+
+Una vez que se ha realizado la compilación del \emph{kernel} y se ha creado el
+\emph{root file system} se cuenta con los recursos necesarios para realizar
+pruebas sobre la tarjeta de desarrollo \emph{XUPV2P}.
+
+\section{Formato de la \emph{compact flash}}
+
+La \emph{compact flash}  deberá de tener  dos particiones para su correcto
+funcionamiento en este proyecto, la primera partición será en formato FAT16 y en
+donde estará localizado el archivo ``system.ace'', la segunda en formato
+\emph{ext2} en donde se encontrará el \emph{root file system}.
+
+La primera partición deberá de ser formateada bajo un sistema operativo
+\emph{Windows} con la herramienta \emph{mkdosfs}\footnote{\emph{mkdosfs} es el
+comando para crear un sistema MS-DOS FAT32 archivos bajo Linux, y como tal
+similar en uso a mkfs.} con el siguiente comando:
+
+\begin{verbatim}
+ mkdosfs -s 64 -F 16 -R 1 F:
+\end{verbatim}
+
+Esta partición contendra el \emph{root file system} genrado anteriormente.
+
+A la segunda partición se le asignará un formato \emph{ext2}, en esta partición
+deberá de ser copiado el \emph{system.ace}.
+
+\section{Modificación del \emph{device tree}}
+
+Para poder juntar el \emph{kernel} con el \emph{root file system} generado será
+necesario hacer modificaciones en el archivo ``xilinx.dts''  modificando la
+siguiente linea  :
+
+\begin{lstlisting}[caption=Archivo ``xilinx.dts'' ]
+		bootargs = "console=ttyUL0,115200 root=/dev/ram, rw";
+\end{lstlisting}
+por :
+\begin{lstlisting}[caption=``xilinx.dts'' ]
+		bootargs = "console=ttyUL0,115200 root=/dev/xs`2 rw ip=dhcp";
+\end{lstlisting}
+
+Esta nueva configuración  permite al sistema montar el \emph{root file system}
+desde la tarjeta \emph{compact flash}, además solicita a un servidor dhcp una
+dirección IP. Debido a las modificaciones hechas al archivo ``xilinx.dts'' es
+necesario recompilar el kernel y generar de nueva cuenta el
+archivo ``system.ace''.
+
+
+\section{Configuración de terminal}
+
+Una vez que se han realizado las operaciones anteriores y se han copiado los 
+archivos a la tarjeta \emph{compact flash} se proceden a realizar pruebas en
+la tarjeta de desarrollo, para ello es necesario configurar una consola remota,
+en este proyecto se hizo uso de \emph{Minicom}\footnote{Minicom es un programa
+de módem basado en texto y emulación de terminal para sistemas operativos
+\emph{UNIX}, originalmente escrito por Miquel Van Smoorenburg, y modelado de
+acuerdo con el popular programa de MS-DOS Telix.}, la configuración se realiza
+con los siguientes comandos:
+
+\begin{verbatim}
+  Proyecto@debian$sudo minicom -s
+              +-----[configuration]------+
+            | Filenames and paths      |
+            | File transfer protocols  |
+            | Serial port setup        |
+            | Modem and dialing        |
+            | Screen and keyboard      |
+            | Save setup as dfl        |
+            | Save setup as..          |
+            | Exit                     |
+            | Exit from Minicom        |
+            +--------------------------+
+    +----------------------------------------------------------+
+    | A -    Serial Device      : /dev/USB0                    |
+    | B - Lockfile Location     : /var/lock                    |
+    | C -   Callin Program      :                              |
+    | D -  Callout Program      :                              |
+    | E -    Bps/Par/Bits       : 115200 8N1                   |
+    | F - Hardware Flow Control : Yes                          |
+    | G - Software Flow Control : No                           |
+    |                                                          |
+    |    Change which setting?                                 |
+    +----------------------------------------------------------+
+    
+\end{verbatim}
+
+\section{Arranque del sistema}
+
+En este punto se tiene configurada la terminal para poder acceder a la tarjeta
+de desarrollo, una vez que se coloca la \emph{compact flash} se enciende el
+sistema el cual genera una salida mostrada en el el \emph{Apéndice B}.
+
+Durante el arranque del sistema se generan llaves para la conexión via remota,
+esto se puede observar de la siguente manera:
+
+\begin{verbatim}
+ Generating RSA Key...
+Generating public/private rsa1 key pair.
+Your identification has been saved in /etc/ssh_host_key.
+Your public key has been saved in /etc/ssh_host_key.pub.
+The key fingerprint is:
+d7:2c:95:b1:0d:21:b1:db:2c:4d:ae:55:c9:14:77:5c 
+The key's randomart image is:
++--[RSA1 2048]----+
+|          o.+.ooE|
+|           o O oo|
+|          . = =  |
+|           @ .   |
+|        S = O    |
+|         . =     |
+|          .      |
+|                 |
+|                 |
++-----------------+
+\end{verbatim}
+
+Una vez que se han generado la llaves y el sistema a arrancado se inicia una
+sesión como administrador del sistema:
+
+\begin{verbatim}
+ XUPV2P-MicheAngelo login: root
+[root@XUPV2P-MicheAngelo /]#
+\end{verbatim}
+
+Como adminustrador del sistema se verifican los recursos disponibles:
+
+\begin{verbatim}
+[root@XUPV2P-MicheAngelo ~]# uname -a
+Linux XUPV2P-MicheAngelo 3.2.0 
+#6 Wed Oct 17 16:16:35 CDT 2012 ppc GNU/Linux
+[root@XUPV2P-MicheAngelo ~]# cat /proc/cpuinfo 
+processor       : 0
+cpu             : Virtex-II Pro
+clock           : 300.000000MHz
+revision        : 8.160 (pvr 2001 08a0)
+bogoppc        : 600.00
+timebase        : 300000000
+platform        : Xilinx Virtex
+model           : testing
+Memory          : 256 MB
+[root@XUPV2P-MicheAngelo ~]# cat /proc/meminfo 
+MemTotal:         252820 kB
+MemFree:          242268 kB
+Buffers:             240 kB
+Cached:             6376 kB
+SwapCached:            0 kB
+Active:             4308 kB
+Inactive:           3116 kB
+Active(anon):        824 kB
+Inactive(anon):        8 kB
+Active(file):       3484 kB
+Inactive(file):     3108 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:             0 kB
+HighFree:              0 kB
+LowTotal:         252820 kB
+LowFree:          242268 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                16 kB
+Writeback:             0 kB
+AnonPages:           816 kB
+Mapped:             2012 kB
+Shmem:                24 kB
+Slab:               3584 kB
+SReclaimable:        780 kB
+SUnreclaim:         2804 kB
+KernelStack:         216 kB
+PageTables:          128 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:       62408 kB
+Committed_AS:       2264 kB
+VmallocTotal:     890880 kB
+VmallocUsed:         160 kB
+VmallocChunk:     890684 kB
+[root@XUPV2P-MicheAngelo ~]#   
+\end{verbatim}
+
+\section{Compilación cruzada para Virtex-II Pro}
+
+Gracias a \emph{buildroot} se cuenta ya con un entorno de compilación cruzada
+capaz de generar archivos binarios que pueden ejecutarse desde la  tarjeta de
+desarrollo de forma nativa, para poder compilar una aplicación para el entorno
+generado es necesario configurar un par de variables de entorno :
+
+\begin{lstlisting}[caption=Variables de entorno para compilación cruzada',]
+export TOOLCHAIN_PPC=/opt/toolchains-ppc/buildroot-2011.05
+export PATH=$TOOLCHAIN_PPC/output/host/usr/bin:$PATH
+ 
+export AR=$TOOLCHAIN_PPC/output/host/usr/bin/ppc-linux-ar
+export AS=$TOOLCHAIN_PPC/output/host/usr/bin/ppc-linux-as
+export CC=$TOOLCHAIN_PPC/output/host/usr/bin/ppc-linux-gcc
+export CPP=$TOOLCHAIN_PPC/output/host/usr/bin/ppc-linux-cpp
+export CXX=$TOOLCHAIN_PPC/output/host/usr/bin/ppc-linux-g++
+export LD=$TOOLCHAIN_PPC/output/host/usr/bin/ppc-linux-ld
+export GCC=$TOOLCHAIN_PPC/output/host/usr/bin/ppc-linux-gcc
+export NM=$TOOLCHAIN_PPC/output/host/usr/bin/ppc-linux-nm
+\end{lstlisting}
+
+Se procede a escribir una aplicación para probar la compilación cruzada:
+\lstinputlisting[caption= Holavirtex.c,language=C]{./code/Holavirtex.c}
+
+Ahora es  posible realizar la compilación cruzada desde el sistema huesped (x86)
+hasta el sistema objetivo \emph{PPC045}, a través del binario
+\emph{ppc-linux-gcc}, además vamos a agregar el \emph{flag static} para crear un
+binario estático.
+\begin{verbatim}
+ ppc-linux-gcc /tmp/helloworld.c -static -s -o /tmp/helloworld-ppc
+\end{verbatim}
+
+El ejecutable generado debe de ser copiado y ejecutado en la tarjeta de
+desarrollo como se indica :
+
+\begin{verbatim}
+ Proyecto@debian$ scp /tmp/helloworld-mips root@192.168.1.1:/
+\end{verbatim}
+
+Y desde \emph{minicom} se ejecuta la aplicación:
+
+\begin{verbatim}
+ [root@XUPV2P-MicheAngelo ~]#  ./helloworld-mips
+\end{verbatim}
+
+
+

@@ -1,0 +1,43 @@
+Release 8.2.02i ngcbuild I.34
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngcbuild -p xc2vp30ff896-7 -intstyle silent -sd ..
+ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper.ngc
+../ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper.ngc
+
+Reading NGO file
+'/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/ddr_128mb_16mx64_rank
+1_row13_col9_cl2_5_wrapper/ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper.ngc'
+...
+Executing edif2ngd -noa
+"/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/ddr_128mb_16mx64_rank
+1_row13_col9_cl2_5_wrapper_async_fifo_v4_0.edn"
+"ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper_async_fifo_v4_0.ngo"
+Release 8.2.02i - edif2ngd I.34
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 8.2.02i edif2ngd I.34
+INFO:NgdBuild - Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+Writing module to
+"ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper_async_fifo_v4_0.ngo"...
+Loading design module
+"/home/proyecto/Proyecto/XUPV2P-MicheAngelo/implementation/ddr_128mb_16mx64_rank
+1_row13_col9_cl2_5_wrapper/ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper_async
+_fifo_v4_0.ngo"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 56112 kilobytes
+
+Writing NGC file "../ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper.ngc" ...
+
+Writing NGCBUILD log file
+"../ddr_128mb_16mx64_rank1_row13_col9_cl2_5_wrapper.blc"...

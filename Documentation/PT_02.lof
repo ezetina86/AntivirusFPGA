@@ -1,0 +1,44 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces FPGA gen\IeC {\'e}rico\relax }}{15}{figure.caption.9}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Tarjeta de desarrollo Virtex-II Pro Development System\relax }}{16}{figure.caption.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Nuevo proyecto en Xilinx EDK\relax }}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Selecci\IeC {\'o}n del directorio destino\relax }}{18}{figure.caption.12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Selecci\IeC {\'o}n de un nuevo dise\IeC {\~n}o\relax }}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Selecci\IeC {\'o}n de tarjeta de desarrollo\relax }}{20}{figure.caption.14}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Selecci\IeC {\'o}n de procesador\relax }}{20}{figure.caption.15}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Configurando el procesador PowerPC\relax }}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Configurac\IeC {\'o}n del RS232\relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Estado de la licencia\relax }}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Selecci\IeC {\'o}n del Ethernet\_MAC y SysACE\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Selecci\IeC {\'o}n de Dispositivo de Memoria DDR\relax }}{23}{figure.caption.20}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Selecci\IeC {\'o}n de Dispositivo de Memoria DDR\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Selecci\IeC {\'o}n de lineas de Cach\IeC {\'e}\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Selecci\IeC {\'o}n de programa de prueba\relax }}{25}{figure.caption.23}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Selecci\IeC {\'o}n de divisi\IeC {\'o}n del programa en memoria\relax }}{26}{figure.caption.24}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Generaci\IeC {\'o}n de \emph {hardware} \relax }}{26}{figure.caption.25}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Configuraci\IeC {\'o}n del OPB\_EthernetLite\relax }}{27}{figure.caption.26}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Confuraci\IeC {\'o}n del bootloop\relax }}{27}{figure.caption.27}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Selecci\IeC {\'o}n Device Tree\relax }}{28}{figure.caption.28}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces BootArgs Kernel Command Line est\IeC {\'a}tica\relax }}{29}{figure.caption.29}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Diagrama de bloques del \emph {hardware} creado\relax }}{30}{figure.caption.30}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Sistema de c\IeC {\'o}mputo en capas\relax }}{33}{figure.caption.31}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces El proceso de compilaci\IeC {\'o}n\relax }}{42}{figure.caption.35}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagrama a bloques de la tarjeta Virtex-II Pro 50\relax }}{44}{figure.caption.36}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces SystemACE\relax }}{47}{figure.caption.37}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Diagrama a bloques de la tarjeta Virtex-II Pro 50\relax }}{75}{figure.caption.44}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Pantalla de instalaci\IeC {\`o}n ISE 8.2\relax }}{82}{figure.caption.45}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces M\IeC {\'o}dulos a instalar\relax }}{83}{figure.caption.46}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Directorio de instalaci\IeC {\`o}n\relax }}{84}{figure.caption.47}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Ejecuci\IeC {\'o}n de ISE 8.2\relax }}{86}{figure.caption.48}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Ejecuci\IeC {\'o}n de EDK 8.2\relax }}{87}{figure.caption.49}
+\addvspace {10\p@ }

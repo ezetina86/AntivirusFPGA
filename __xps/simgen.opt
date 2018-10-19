@@ -1,0 +1,1 @@
+ -p virtex2p -lang vhdl -lp /home/proyecto/Proyecto/lib/   -pe ppc405_0  $(PPC405_0_BOOTLOOP)  -s mti
